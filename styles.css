@@ -1,0 +1,92 @@
+:root {
+    --primary-color: #5D93E1;
+    --background-dark: #282C34;
+    --text-light: #F4F4F4;
+    --text-dark: #333;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--text-light);
+}
+
+header {
+    background: var(--background-dark);
+    color: var(--text-light);
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+section {
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.project-item {
+    background: var(--text-light);
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+.project-info {
+    padding: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: darken(var(--primary-color), 10%);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: var(--background-dark);
+    color: var(--text-light);
+}
