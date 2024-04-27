@@ -51,11 +51,9 @@ section {
 
 /* ------------------------ ANIMATIONS ----------------------- */
 
-
-@keyframes text-pop {
-    0% { transform: scale(0.5); opacity: 0; }
-    85% { transform: scale(1.05); opacity: 1; }
-    100% { transform: scale(1); }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* ----------------------------------------------------------- */
@@ -124,18 +122,35 @@ header {
     align-items: center;
     gap: 2rem;
 
-    h1 {
-        font-size: 4rem;
-        color: var(--text-white);
-        text-shadow: var(--text-shadow);
-        animation: text-pop 1s cubic-bezier(0.11, 0.84, 0.5, 1.2) forwards;
+    .logo-name {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+        justify-items: center;
+
+        h1 {
+            font-size: 4rem;
+            color: var(--text-white);
+            text-shadow: var(--text-shadow);
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        img {
+            width: 75px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: var(--box-shadow);
+            transform: translateY(-0.1rem);
+            animation: fadeIn 1s ease-in-out forwards;
+        }
     }
 
     p {
         font-size: 2rem;
         color: var(--text-white);
         text-shadow: var(--text-shadow);
-        animation: text-pop 1s cubic-bezier(0.11, 0.84, 0.5, 1.2) forwards;
+        animation: fadeIn 1s ease-in-out forwards;
     }
 
     a {
