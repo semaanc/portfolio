@@ -1,9 +1,11 @@
 :root {
     --primary-color: #5D93E1;
     --primary-dark: #4178be;
+    --primary-light: #bbc9d9;
     --background-navy: #282C34;
     --background-black: #000;
     --background-white: #FFF;
+    --background-gray: #d8d8d8;
     --text-white: #FFF;
     --text-black: #000;
     --text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
@@ -25,14 +27,28 @@ body {
 
 section {
     padding: 2rem;
-    margin-top: 1rem;
 }
 
 h2 {
     font-size: 2rem;
     font-weight: 600;
     padding: 1rem;
-    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1rem;
+    text-align: center;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1rem;
+    text-align: center;
+
 }
 
 /* ----------------------------------------------------------- */
@@ -198,11 +214,15 @@ footer {
 /* ------------------------ PROJECTS ------------------------- */
 
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
+    justify-content: space-evenly;
+    align-items: start;
+    grid-auto-flow: dense;
 
     .project-item {
+        width: 30vw;
         position: relative;
         background: var(--text-white);
         box-shadow: var(--box-shadow);
@@ -234,9 +254,10 @@ footer {
 
         img {
             width: 100%;
-            height: 200px;
-            object-fit: contain;
-            border-radius: 8px;
+            height: 30vh;
+            object-fit: cover;
+            border-radius: 5px;
+            background-color: var(--background-gray);
         }
     }
 
@@ -245,6 +266,21 @@ footer {
 
         p {
             margin-bottom: 2.5rem;
+        }
+    }
+}
+
+#projects-exp {
+    #craftai {
+        img {
+            object-fit: contain;
+        }
+    }
+
+    #wecookit {
+        img {
+            object-fit: contain;
+            background-color: var(--background-white);
         }
     }
 }
