@@ -53,25 +53,6 @@ h4 {
 
 /* ----------------------------------------------------------- */
 
-/* ---------------------- MEDIA QUERIES ---------------------- */
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-    
-    .contact-links {
-        flex-direction: column;
-    }
-}
-
-/* ----------------------------------------------------------- */
-
 /* ------------------------ ANIMATIONS ----------------------- */
 
 @keyframes fadeIn {
@@ -107,6 +88,7 @@ nav {
     z-index: 1;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     padding: 0.7rem;
     background: var(--background-black);
@@ -115,7 +97,10 @@ nav {
     ul {
         list-style: none;
         display: flex;
-        gap: 5rem;
+        gap: 1rem 5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        
 
         li a {
             color: var(--text-white);
@@ -164,6 +149,7 @@ header {
         }
 
         img {
+            position: relative;
             width: 75px;
             height: auto;
             border-radius: 50%;
@@ -216,13 +202,14 @@ footer {
 .project-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: space-evenly;
+    gap: 3rem;
+    justify-content: center;
     align-items: start;
     grid-auto-flow: dense;
+    margin-top: 1.5rem;
 
     .project-item {
-        width: 30vw;
+        width: 25vw;
         position: relative;
         background: var(--text-white);
         box-shadow: var(--box-shadow);
