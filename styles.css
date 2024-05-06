@@ -14,6 +14,7 @@
     --container-background: #f9f9f9;
     --container-border: 1px solid #e1e1e1;
     --hover-color: #e0e0e0;
+    --proficiency-level-background: #eee;
 }
 
 * {
@@ -52,6 +53,17 @@ h3 {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+/* ----------------------------------------------------------- */
+
+/* ------------------------ MEDIA QUERIES -------------------- */
+
+
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ----------------------------------------------------------- */
@@ -206,17 +218,36 @@ footer {
         text-align: center;
     }
 
-    #projects-exp {
-        #craftai {
+    #projects-ce {
+        #ruth-goldberg-machine {
             img {
-                object-fit: contain;
+                object-fit: cover;
             }
         }
 
-        #wecookit {
+        #risc-v {
             img {
-                object-fit: contain;
+                object-fit: cover;
+            }
+        }
+    }
+
+    #projects-exp {
+        #craftai {
+            img {
+                object-fit: cover;
+            }
+        }
+
+        #we-cook-it {
+            img {
                 background-color: var(--background-white);
+            }
+        }
+
+        #beyond-sight-and-sound {
+            img {
+                object-fit: cover;
             }
         }
     }
@@ -232,7 +263,7 @@ footer {
 
         .project-item {
             width: 25vw;
-            min-width: 300px;
+            min-width: 400px;
             position: relative;
             background: var(--background-white);
             box-shadow: var(--box-shadow);
@@ -265,7 +296,7 @@ footer {
             img {
                 width: 100%;
                 height: 30vh;
-                object-fit: cover;
+                object-fit: contain;
                 border-radius: 5px;
                 background-color: var(--background-gray);
             }
@@ -294,35 +325,35 @@ footer {
     h2 {
         color: var(--text-white);
     }
-}
 
-.contact-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0vh 5vw;
-    padding: 2vh 2vw;
-
-    .contact-button {
+    .contact-links {
         display: flex;
-        align-items: center;
-        background-color: none;
-        text-decoration: none;
-        transition: all 0.3s ease;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0vh 5vw;
+        padding: 2vh 2vw;
 
-        i {
-            font-size: 2.5rem;
-            color: var(--background-white);
+        .contact-button {
+            display: flex;
+            align-items: center;
+            background-color: none;
+            text-decoration: none;
+            transition: all 0.3s ease;
+
+            i {
+                font-size: 2.5rem;
+                color: var(--background-white);
+            }
+
+            #phone-icon {
+                font-size: 2rem;
+            }
         }
 
-        #phone-icon {
-            font-size: 2rem;
-        }
-    }
-
-    .contact-button:hover {
-        i {
-            color: var(--primary-color);
+        .contact-button:hover {
+            i {
+                color: var(--primary-color);
+            }
         }
     }
 }
@@ -332,12 +363,20 @@ footer {
 /* -------------------------- SKILLS ------------------------- */
 
 .skills-container {
-    max-width: 1200px;
+    min-width: 300px;
     margin: 0 auto;
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+
+    #programming-languages {
+        padding: 20px 40px;
+    }
+
+    #organization-tools {
+        padding: 20px 10px;
+    }
 
     .skill-category {
         background: var(--container-background);
@@ -349,7 +388,6 @@ footer {
         h3 {
             color: var(--text-black); 
             text-align: center;
-            margin-bottom: 10px;
         }
 
         .skill-icons {
@@ -376,13 +414,18 @@ footer {
             }
         }
     }
-}
 
-@media (max-width: 768px) {
-    .skills-container {
-        grid-template-columns: 1fr;
+
+    .proficiency-level {
+        background: var(--proficiency-level-background); 
+        color: var(--text-black);
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 0.9em;
+        margin-left: auto;
     }
 }
+
 
 
 /* ----------------------------------------------------------- */
