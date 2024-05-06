@@ -15,6 +15,7 @@
     --container-border: 1px solid #e1e1e1;
     --hover-color: #e0e0e0;
     --proficiency-level-background: #eee;
+    --education-icon-background: #e0e0e0;
 }
 
 * {
@@ -25,6 +26,7 @@
 
 body {
     font-family: var(--font-family);
+    font-size: 1.05rem;
     color: var(--text-black);
     background-color: var(--text-white);
 }
@@ -44,6 +46,10 @@ h3 {
 
 #experience, #skills, #education {
     padding: 5vh 10vw;
+}
+
+section {
+    min-height: 100vh;
 }
 
 /* ----------------------------------------------------------- */
@@ -218,40 +224,6 @@ footer {
         text-align: center;
     }
 
-    #projects-ce {
-        #ruth-goldberg-machine {
-            img {
-                object-fit: cover;
-            }
-        }
-
-        #risc-v {
-            img {
-                object-fit: cover;
-            }
-        }
-    }
-
-    #projects-exp {
-        #craftai {
-            img {
-                object-fit: cover;
-            }
-        }
-
-        #we-cook-it {
-            img {
-                background-color: var(--background-white);
-            }
-        }
-
-        #beyond-sight-and-sound {
-            img {
-                object-fit: cover;
-            }
-        }
-    }
-
     .project-grid {
         display: flex;
         flex-wrap: wrap;
@@ -295,10 +267,11 @@ footer {
 
             img {
                 width: 100%;
-                height: 30vh;
-                object-fit: contain;
+                height: 215px;
+                object-fit: cover;
                 border-radius: 5px;
-                background-color: var(--background-gray);
+                background-color: var(--background-white);
+                box-shadow: var(--box-shadow);
             }
         }
 
@@ -307,6 +280,15 @@ footer {
 
             p {
                 margin-bottom: 40px;
+            }
+        }
+    }
+
+    #projects-exp {
+        #wecookit {
+            img {
+                object-fit: contain;
+                box-shadow: none;
             }
         }
     }
@@ -422,11 +404,152 @@ footer {
         padding: 2px 8px;
         border-radius: 4px;
         font-size: 0.9em;
+        margin-right: 5px;
         margin-left: auto;
     }
 }
 
+/* ----------------------------------------------------------- */
 
+/* ------------------------- EDUCATION ----------------------- */
+
+#education {
+    background: linear-gradient(to right, #f4f4f4, #e0e0e0);
+    padding: 2vh 5vw;
+    min-height: 100vh;
+    border-radius: 8px;
+
+
+    .timeline-item {
+        margin-bottom: 20px;
+        position: relative;
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+
+        .timeline-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-right: 30px;
+            gap: 15px;
+            min-width: 10vw;
+
+            .institution {
+                font-size: 1rem;
+                font-weight: 600;
+                text-align: center;
+            }
+
+            .timeline-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                width: 80px;
+                height: 80px;
+                background: var(--education-icon-background);
+                border-radius: 100%;
+
+                i {
+                    color: var(--text-black);
+                }
+            }
+
+            .date-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .timeline-content {
+            padding: 50px 50px;
+            background: var(--background-white);
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+            width: 100%;
+
+            .first-line {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1vh;
+
+                h3 {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                h5 {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                }
+            }
+
+            .second-line {
+                display: flex;
+                justify-content: space-between;
+
+                h4 {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                }
+            }
+
+            .relevant-coursework {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 10vw;
+                margin-top: 2vh;
+                
+
+                .course-col {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    h4 {
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
+
+                    .course-entry {
+                        .hidden {
+                            margin: 10px 0px 10px 20px;
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .coursework {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                margin-top: 2vh;
+
+                h4 {
+                    font-weight: 600;
+                }
+
+                .course-content {
+                    margin: 10px 0px 10px 20px;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10vw;
+                }
+            }
+        }
+    }
+}
 
 /* ----------------------------------------------------------- */
 

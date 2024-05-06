@@ -43,3 +43,19 @@ function setEqualHeight() {
     items.forEach(item => item.style.height = `${maxHeight}px`);
   });
 }
+
+function toggleVisibility(id) {
+  var element = document.getElementById(id);
+  var allLists = document.querySelectorAll('.relevant-coursework ul');
+  allLists.forEach(list => {
+    if (list.id !== id) {
+      list.style.display = 'none';
+    }
+  });
+
+  if (element.style.display === 'block') {
+    element.style.display = 'none';
+  } else {
+    element.style.display = 'block';
+  }
+}
