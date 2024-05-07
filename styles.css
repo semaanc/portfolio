@@ -15,7 +15,9 @@
     --container-border: 1px solid #e1e1e1;
     --hover-color: #e0e0e0;
     --proficiency-level-background: #eee;
+    --education-section-background: #f4f4f4;
     --education-icon-background: #e0e0e0;
+    --outline-gray: #ccc;
 }
 
 * {
@@ -97,7 +99,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 1000;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -414,137 +416,197 @@ footer {
 /* ------------------------- EDUCATION ----------------------- */
 
 #education {
-    background: linear-gradient(to right, #f4f4f4, #e0e0e0);
+    background: var(--education-section-background);
     padding: 2vh 5vw;
     min-height: 100vh;
     border-radius: 8px;
 
-
-    .timeline-item {
-        margin-bottom: 20px;
+    .timeline {
         position: relative;
-        display: flex;
-        align-items: center; 
-        justify-content: center;
+        padding-left: 30px;
 
-        .timeline-info {
+        &::before {
+            content: '';
+            position: absolute;
+            left: 7vw;
+            top: 30px;
+            bottom: 30px;
+            width: 2px;
+            background-color: var(--outline-gray);
+        }
+
+        .timeline-item {
+            margin-bottom: 20px;
+            position: relative;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            align-items: center; 
             justify-content: center;
-            margin-right: 30px;
-            gap: 15px;
-            min-width: 10vw;
 
-            .institution {
-                font-size: 1rem;
-                font-weight: 600;
-                text-align: center;
-            }
-
-            .timeline-icon {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                width: 80px;
-                height: 80px;
-                background: var(--education-icon-background);
-                border-radius: 100%;
-
-                i {
-                    color: var(--text-black);
-                }
-            }
-
-            .date-container {
+            .timeline-info {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-            }
-        }
+                margin-right: 30px;
+                gap: 15px;
+                min-width: 10vw;
+                padding: 20px 0px;
+                z-index: 1;
+                background: var(--education-section-background);
 
-        .timeline-content {
-            padding: 50px 50px;
-            background: var(--background-white);
-            border-radius: 8px;
-            box-shadow: var(--box-shadow);
-            width: 100%;
-
-            .first-line {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 1vh;
-
-                h3 {
-                    margin: 0;
-                    padding: 0;
-                }
-
-                h5 {
-                    margin: 0;
-                    padding: 0;
-                    font-size: 1.1rem;
-                    font-weight: 400;
-                }
-            }
-
-            .second-line {
-                display: flex;
-                justify-content: space-between;
-
-                h4 {
-                    margin: 0;
-                    padding: 0;
-                    font-size: 1.2rem;
+                .institution {
+                    font-size: 1rem;
                     font-weight: 600;
+                    text-align: center;
                 }
-            }
 
-            .relevant-coursework {
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                gap: 10vw;
-                margin-top: 2vh;
-                
+                .timeline-icon {
+                    position: relative;
+                    margin: 0 auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    width: 80px;
+                    height: 80px;
+                    background: var(--education-icon-background);
+                    border-radius: 100%;
+                    z-index: 2;
 
-                .course-col {
+                    i {
+                        color: var(--text-black);
+                    }
+                }
+
+                .date-container {
                     display: flex;
                     flex-direction: column;
-                    gap: 5px;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
 
-                    h4 {
-                        font-weight: 600;
-                        cursor: pointer;
+            .timeline-content {
+                padding: 50px 50px;
+                background: var(--background-white);
+                border-radius: 8px;
+                box-shadow: var(--box-shadow);
+                width: 100%;
+
+                .timeline-header {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin: 0;
+                    padding: 0;
+
+                    img {
+                        width: 4rem;
+                        height: 4rem;
+                        margin-right: 20px;
                     }
 
-                    .course-entry {
-                        .hidden {
-                            margin: 10px 0px 10px 20px;
-                            display: none;
+                    .line-container {
+                        width: 100%;
+
+                        .first-line {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-bottom: 1vh;
+
+                            h3 {
+                                margin: 0;
+                                padding: 0;
+                            }
+
+                            h5 {
+                                margin: 0;
+                                padding: 0;
+                                font-size: 1.1rem;
+                                font-weight: 400;
+                            }
+                        }
+
+                        .second-line {
+                            display: flex;
+                            justify-content: space-between;
+
+                            h4 {
+                                margin: 0;
+                                padding: 0;
+                                font-size: 1.2rem;
+                                font-weight: 600;
+                            }
+
+                            .degree-type {
+                                color: var(--primary-color);
+                            }
                         }
                     }
                 }
-            }
 
-            .coursework {
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-                margin-top: 2vh;
-
-                h4 {
-                    font-weight: 600;
-                }
-
-                .course-content {
-                    margin: 10px 0px 10px 20px;
+                .relevant-coursework {
                     display: flex;
                     flex-direction: row;
+                    align-items: flex-start;
                     gap: 10vw;
+                    margin-top: 2vh;
+                    margin-left: 4rem;
+                    padding-left: 20px;
+
+                    .course-col {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+
+                        h4 {
+                            font-weight: 600;
+                            cursor: pointer;
+                        }
+
+                        .course-entry {
+                            ul {
+                                padding: 0;
+                            }
+
+                            .hidden {
+                                margin: 0px 0px 0px 20px;
+                                max-height: 0;
+                                opacity: 0;
+                                overflow: hidden;
+                                transition: max-height 0.5s, opacity 0.5s ease-out, margin 0.5s 0.2s;
+                            }
+
+                            .visible {
+                                margin: 10px 0px 10px 20px;
+                                max-height: 70vh;
+                                opacity: 1;
+                                transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
+                            }
+                        }
+                    }
+                }
+
+                .coursework {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    margin-top: 2vh;
+                    margin-left: 4rem;
+                    padding-left: 20px;
+
+                    h4 {
+                        font-weight: 600;
+                    }
+
+                    .course-content {
+                        margin: 10px 0px 10px 20px;
+                        display: flex;
+                        flex-direction: row;
+                        gap: 10vw;
+                    }
                 }
             }
         }
@@ -561,9 +623,9 @@ form {
     min-width: 300px;
     margin: 2vh auto;
     padding: 2vh 2vw;
-    background: #fff;
+    background: var(--background-white);
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
 
     input[type="text"],
     input[type="email"],
@@ -571,7 +633,7 @@ form {
         width: 100%;
         padding: 8px;
         margin-bottom: 20px;
-        border: 1px solid #ccc;
+        border: 1px solid var(--outline-gray);
         border-radius: 4px;
     }
 

@@ -46,16 +46,11 @@ function setEqualHeight() {
 
 function toggleVisibility(id) {
   var element = document.getElementById(id);
-  var allLists = document.querySelectorAll('.relevant-coursework ul');
-  allLists.forEach(list => {
-    if (list.id !== id) {
-      list.style.display = 'none';
-    }
-  });
-
-  if (element.style.display === 'block') {
-    element.style.display = 'none';
+  if (element.classList.contains('visible')) {
+    element.classList.remove('visible');
+    element.classList.add('hidden');
   } else {
-    element.style.display = 'block';
+    element.classList.add('visible');
+    element.classList.remove('hidden');
   }
 }
