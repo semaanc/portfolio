@@ -18,6 +18,7 @@
     --education-section-background: #f4f4f4;
     --education-icon-background: #e0e0e0;
     --outline-gray: #ccc;
+    --grade-scale-color: rgb(30, 180, 25);
 }
 
 * {
@@ -46,8 +47,16 @@ h3 {
     padding: 3vh 2vw;
 }
 
-#experience, #skills, #education {
-    padding: 5vh 10vw;
+#experience, #skills {
+    padding: 5vh 10vw 10vh 10vw;
+}
+
+#projects-ce, #projects-cs, #projects-exp {
+    padding: 0vh 2vw 10vh 2vw;
+}
+
+#education {
+    padding: 5vh 2vw 10vh 2vw;
 }
 
 section {
@@ -417,9 +426,6 @@ footer {
 
 #education {
     background: var(--education-section-background);
-    padding: 2vh 5vw;
-    min-height: 100vh;
-    border-radius: 8px;
 
     .timeline {
         position: relative;
@@ -488,6 +494,7 @@ footer {
 
             .timeline-content {
                 padding: 50px 50px;
+                margin-right: 4vw;
                 background: var(--background-white);
                 border-radius: 8px;
                 box-shadow: var(--box-shadow);
@@ -538,6 +545,11 @@ footer {
                                 padding: 0;
                                 font-size: 1.2rem;
                                 font-weight: 600;
+                            }
+
+
+                            .grade-scale {
+                                color: var(--grade-scale-color);
                             }
 
                             .degree-type {
