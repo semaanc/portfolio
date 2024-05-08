@@ -303,6 +303,32 @@ footer {
             }
         }
     }
+
+    #projects-cs {
+        
+        #klondike {
+            img {
+                object-fit: contain;
+                background-color: #1e1f22;
+            }
+        }
+
+        #fuse-filesystem {
+            img {
+                object-fit: contain;
+                background-color: #0c1116;
+            }
+        
+        }
+
+        #bridgit {
+            img {
+                object-fit: contain;
+                background-color: #f4f4f4;
+            }
+        
+        }
+    }
 }
 
 /* ----------------------------------------------------------- */
@@ -492,6 +518,7 @@ footer {
                 background: var(--background-white);
                 border-radius: 8px;
                 box-shadow: var(--box-shadow);
+                border: var(--container-border);
                 width: 100%;
 
                 .timeline-header {
