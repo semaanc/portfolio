@@ -10,6 +10,7 @@
     --text-black: #000;
     --text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --box-shadow-focus: 0 8px 16px rgba(0, 0, 0, 0.2);
     --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --container-background: #f9f9f9;
     --container-border: 1px solid #e1e1e1;
@@ -285,11 +286,12 @@ footer {
             border: var(--container-border);
             border-radius: 8px;
             overflow: hidden;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             padding: 30px 20px;
 
             &:hover {
                 transform: translateY(-5px);
+                box-shadow: var(--box-shadow-focus);
             }
 
             .view-btn {
@@ -763,6 +765,68 @@ footer {
                         flex-direction: row;
                         gap: 10vw;
                     }
+                }
+            }
+        }
+    }
+}
+
+/* ----------------------------------------------------------- */
+
+/* -------------------------- AWARDS ------------------------- */
+
+#awards {
+    .awards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+
+        .card {
+            background: var(--background-white);
+            box-shadow: var(--box-shadow);
+            border: var(--container-border);
+            border-radius: 8px;
+            padding: 20px;
+            width: 375px;
+            position: relative;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: var(--box-shadow-focus);
+            }
+
+            .card-header {
+                font-size: 20px;
+                font-weight: 600;
+                border-bottom: 2px solid var(--text-black);
+                padding-bottom: 10px;
+                margin-bottom: 15px;
+                color: var(--primary-color);
+            }
+
+            .card-subheader {
+                color: var(--text-black);
+                margin-bottom: 10px;
+
+                .date {
+                    font-weight: 600;
+                }
+            }
+
+            .association {
+                margin: 3px 0 0 10px;
+                font-size: 0.9rem;
+                font-weight: 400;
+            }
+
+            .highlight {
+                font-weight: 600;
+                margin: 10px 0 0 0;
+
+                .gpa {
+                    color: var(--grade-scale-color);
                 }
             }
         }
