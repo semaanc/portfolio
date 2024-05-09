@@ -127,19 +127,47 @@ nav {
         gap: 1rem 5rem;
         flex-wrap: wrap;
         justify-content: center;
-        
 
-        li a {
-            color: var(--text-white);
-            text-decoration: none;
-            transition: color 0.3s ease-in-out;
+        li {
+            position: relative;
 
-            &:hover {
-                color: var(--primary-color);
+            a {
+                color: var(--text-white);
+                text-decoration: none;
+                transition: color 0.3s ease-in-out;
+
+                &:hover, &:focus {
+                    color: var(--primary-color);
+                }
             }
 
-            &:focus {
-                color: var(--primary-color);
+            &.dropdown {
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: var(--background-black);
+                    min-width: 280px;
+                    box-shadow: var(--box-shadow);
+                    z-index: 1001;
+                    transform: translateX(-0.5rem);
+                    padding: 11px 0px 0px 0px;
+
+                    a {
+                        padding: 0.7rem 15px;
+                        text-decoration: none;
+                        display: block;
+                        text-align: left;
+
+                        &:hover {
+                            background-color: var(--primary-color);
+                            color: var(--background-black);
+                        }
+                    }
+                }
+
+                &:hover .dropdown-content {
+                    display: block;
+                }
             }
         }
     }
