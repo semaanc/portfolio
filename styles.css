@@ -47,7 +47,7 @@ h3 {
     padding: 3vh 2vw;
 }
 
-#experience, #skills {
+#skills {
     padding: 5vh 10vw 10vh 10vw;
 }
 
@@ -57,6 +57,10 @@ h3 {
 
 #education {
     padding: 5vh 2vw 10vh 2vw;
+}
+
+#experience {
+    padding: 5vh 6vw 10vh 6vw;
 }
 
 section {
@@ -390,11 +394,11 @@ footer {
     gap: 20px;
 
     #programming-languages {
-        padding: 20px 40px;
+        padding: 3vh 3vw;
     }
 
     #organization-tools {
-        padding: 20px 10px;
+        padding: 3vh 1vw;
     }
 
     .skill-category {
@@ -437,6 +441,97 @@ footer {
         font-size: 0.9em;
         margin-right: 5px;
         margin-left: auto;
+    }
+}
+
+/* ----------------------------------------------------------- */
+
+/* ------------------------ EXPERIENCE ----------------------- */
+
+#experience {
+    background-color: var(--background-white);
+
+    .timeline {
+
+        .timeline-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+
+            .timeline-content {
+                padding: 50px 50px;
+                background: var(--background-white);
+                border-radius: 8px;
+                box-shadow: var(--box-shadow);
+                border: var(--container-border);
+                width: 100%;
+
+                .timeline-header {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin: 0;
+                    padding: 0;
+
+                    img {
+                        width: 4rem;
+                        height: 4rem;
+                        margin-right: 20px;
+                    }
+
+                    .line-container {
+                        width: 100%;
+
+                        .first-line {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-bottom: 1vh;
+
+                            h3 {
+                                margin: 0;
+                                padding: 0;
+                            }
+
+                            h5 {
+                                margin: 0;
+                                padding: 0;
+                                font-size: 1.1rem;
+                                font-weight: 400;
+                            }
+                        }
+
+                        .second-line {
+                            display: flex;
+                            justify-content: space-between;
+
+                            h4 {
+                                margin: 0;
+                                padding: 0;
+                                font-size: 1.2rem;
+                                font-weight: 600;
+                            }
+
+                            .company {
+                                color: var(--primary-color);
+                            }
+                        }
+                    }
+                }
+
+                .details {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    margin-top: 2vh;
+                    margin-left: 4rem;
+                    padding-left: 40px;
+                    padding-right: 15vw;
+                }
+            }
+        }
     }
 }
 
