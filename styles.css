@@ -865,9 +865,9 @@ footer {
             border: var(--container-border);
             border-radius: 8px;
             padding: 30px;
+            width: 460px;
 
             h3 {
-                min-width: 350px;
                 font-size: 1.7rem;
                 font-weight: 600;
                 padding: 3vh 2vw;

@@ -49,18 +49,13 @@ function setEqualHeight() {
 
     items.forEach(item => {
       item.style.height = 'auto';
-      item.style.width = 'auto';
     });
 
     const maxHeight = Array.from(items).reduce(
       (max, item) => Math.max(max, item.offsetHeight), 0);
-
-    const maxWidth = Array.from(items).reduce(
-      (max, item) => Math.max(max, item.offsetWidth), 0);
     
     items.forEach(item => {
       item.style.height = `${maxHeight}px`;
-      item.style.width = `${maxWidth}px`;
     });
   });
 }
