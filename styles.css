@@ -48,6 +48,10 @@ h3 {
     padding: 3vh 2vw;
 }
 
+section {
+    min-height: 100vh;
+}
+
 #skills {
     padding: 5vh 10vw 10vh 10vw;
 }
@@ -56,16 +60,12 @@ h3 {
     padding: 0vh 2vw 10vh 2vw;
 }
 
-#education {
+#education, #awards, #interests, #contact {
     padding: 5vh 2vw 10vh 2vw;
 }
 
-#experience {
+#experience, #clubs {
     padding: 5vh 6vw 10vh 6vw;
-}
-
-section {
-    min-height: 100vh;
 }
 
 /* ----------------------------------------------------------- */
@@ -827,6 +827,58 @@ footer {
 
                 .gpa {
                     color: var(--grade-scale-color);
+                }
+            }
+        }
+    }
+}
+
+/* ----------------------------------------------------------- */
+
+/* ------------------------- CLUBS --------------------------- */
+
+#clubs {
+    background: var(--background-white);
+
+    .club-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 3vw;
+
+        .club-category {
+            background: var(--background-white);
+            box-shadow: var(--box-shadow);
+            border: var(--container-border);
+            border-radius: 8px;
+            padding: 30px;
+
+            h3 {
+                min-width: 350px;
+                font-size: 1.7rem;
+                font-weight: 600;
+                padding: 3vh 2vw;
+                text-align: center;
+                border-bottom: 2px solid var(--primary-color);
+                margin-bottom: 30px;
+                color: var(--primary-color);
+            }
+
+            .club {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+
+                img {
+                    width: 5rem;
+                    height: 5rem;
+                    margin-right: 15px;
+                }
+
+                p {
+                    margin: 0;
+                    font-size: 1.3rem;
                 }
             }
         }

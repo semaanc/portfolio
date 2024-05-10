@@ -25,6 +25,7 @@ window.addEventListener('resize', setEqualHeight);
 function setEqualHeight() {
   // Get all '.project-grid' containers
   const grids = document.querySelectorAll('.project-grid');
+  const awards = document.querySelectorAll('.club-container');
 
   grids.forEach(grid => {
     // Get all the '.project-item' elements within the current grid
@@ -41,6 +42,26 @@ function setEqualHeight() {
     // Set all '.project-item' elements within the current grid to the maximum
     // height
     items.forEach(item => item.style.height = `${maxHeight}px`);
+  });
+
+  awards.forEach(award => {
+    const items = award.querySelectorAll('.club-category');
+
+    items.forEach(item => {
+      item.style.height = 'auto';
+      item.style.width = 'auto';
+    });
+
+    const maxHeight = Array.from(items).reduce(
+      (max, item) => Math.max(max, item.offsetHeight), 0);
+
+    const maxWidth = Array.from(items).reduce(
+      (max, item) => Math.max(max, item.offsetWidth), 0);
+    
+    items.forEach(item => {
+      item.style.height = `${maxHeight}px`;
+      item.style.width = `${maxWidth}px`;
+    });
   });
 }
 
