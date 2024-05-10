@@ -16,7 +16,7 @@
     --container-border: 1px solid #e1e1e1;
     --hover-color: #e0e0e0;
     --proficiency-level-background: #eee;
-    --education-section-background: #f4f4f4;
+    --section-background: #f4f4f4;
     --education-icon-background: #e0e0e0;
     --outline-gray: #ccc;
     --grade-scale-color: rgb(30, 180, 25);
@@ -50,6 +50,12 @@ h3 {
 
 section {
     min-height: 100vh;
+
+    &:not(#skills) {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
 
 #skills {
@@ -258,7 +264,7 @@ footer {
 #projects {
     h3 {
         text-align: center;
-        padding: 10vh 2vw 3vh 2vw;
+        padding: 10vh 2vw 0vh 2vw;
     }
 
     h4 {
@@ -415,62 +421,66 @@ footer {
 
 /* -------------------------- SKILLS ------------------------- */
 
-.skills-container {
-    min-width: 300px;
-    margin: 0 auto;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+#skills {
+    background-color: var(--section-background);
 
-    #programming-languages {
-        padding: 3vh 3vw;
-    }
-
-    #organization-tools {
-        padding: 3vh 1vw;
-    }
-
-    .skill-category {
-        background: var(--container-background);
-        box-shadow: var(--box-shadow);
-        border: var(--container-border);
-        border-radius: 8px;
+    .skills-container {
+        display: grid;
+        min-width: 300px;
+        margin: 0 auto;
         padding: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
 
-        h3 {
-            color: var(--text-black); 
-            text-align: center;
+        #programming-languages {
+            padding: 3vh 3vw;
         }
 
-        .skill-icons {
-            list-style: none;
+        #organization-tools {
+            padding: 3vh 1vw;
+        }
+
+        .skill-category {
+            background-color: var(--background-white);
+            box-shadow: var(--box-shadow);
+            border: var(--container-border);
+            border-radius: 8px;
             padding: 20px;
 
-            div {
-                margin-bottom: 10px;
-                display: flex;
-                align-items: center;
+            h3 {
+                color: var(--text-black); 
+                text-align: center;
             }
 
-            img {
-                width: 30px;
-                height: 30px;
-                margin-right: 10px;
-                object-fit: contain;
+            .skill-icons {
+                list-style: none;
+                padding: 20px;
+
+                div {
+                    margin-bottom: 10px;
+                    display: flex;
+                    align-items: center;
+                }
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 10px;
+                    object-fit: contain;
+                }
             }
         }
-    }
 
 
-    .proficiency-level {
-        background: var(--proficiency-level-background); 
-        color: var(--text-black);
-        padding: 2px 8px;
-        border-radius: 4px;
-        font-size: 0.9em;
-        margin-right: 5px;
-        margin-left: auto;
+        .proficiency-level {
+            background: var(--proficiency-level-background); 
+            color: var(--text-black);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            margin-right: 5px;
+            margin-left: auto;
+        }
     }
 }
 
@@ -479,7 +489,7 @@ footer {
 /* ------------------------ EXPERIENCE ----------------------- */
 
 #experience {
-    background-color: var(--background-white);
+    background-color: var(--section-background);
 
     .timeline {
 
@@ -570,7 +580,7 @@ footer {
 /* ------------------------- EDUCATION ----------------------- */
 
 #education {
-    background: var(--education-section-background);
+    background: var(--background-white);
 
     .timeline {
         position: relative;
@@ -603,7 +613,7 @@ footer {
                 min-width: 10vw;
                 padding: 20px 0px;
                 z-index: 1;
-                background: var(--education-section-background);
+                background: var(--background-white);
 
                 .institution {
                     font-size: 1rem;
@@ -776,6 +786,8 @@ footer {
 /* -------------------------- AWARDS ------------------------- */
 
 #awards {
+    background-color: var(--background-white);
+
     .awards-container {
         display: flex;
         flex-wrap: wrap;
@@ -838,7 +850,7 @@ footer {
 /* ------------------------- CLUBS --------------------------- */
 
 #clubs {
-    background: var(--background-white);
+    background: var(--section-background);
 
     .club-container {
         display: flex;
