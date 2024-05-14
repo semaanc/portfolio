@@ -66,11 +66,11 @@ section {
     padding: 0vh 2vw 10vh 2vw;
 }
 
-#education, #awards, #interests, #contact {
+#education, #awards, #contact {
     padding: 5vh 2vw 10vh 2vw;
 }
 
-#experience, #clubs {
+#experience, #clubs, #interests {
     padding: 5vh 6vw 10vh 6vw;
 }
 
@@ -907,20 +907,31 @@ footer {
     .interests-container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: center;
         padding: 20px;
 
         .interest {
             text-align: center;
             margin: 10px;
             width: 150px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
 
-            img {
-                width: 100px;
-                height: auto;
+            .interest-icon {
+                width: auto; 
+                height: 80px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
             }
 
             p {
+                font-size: 1.1rem;
                 margin-top: 8px;
                 color: var(--text-black);
             }
