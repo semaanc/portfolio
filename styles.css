@@ -34,6 +34,7 @@ body {
     font-size: 1.05rem;
     color: var(--text-black);
     background-color: var(--text-white);
+    display: none;
 }
 
 h2 {

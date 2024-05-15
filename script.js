@@ -1,4 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
+window.onload = function() {
+  document.body.style.display = 'block';
+};
+
+document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
