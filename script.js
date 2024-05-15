@@ -7,15 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
-
-  const buttons = document.querySelectorAll('.view-btn');
-  buttons.forEach(button => {
-    button.addEventListener('click', function() {
-      alert(
-          'Here would be a modal or detailed view for ' +
-          this.previousElementSibling.textContent);
-    });
-  });
 });
 
 // Set equal height for all project items
@@ -68,5 +59,39 @@ function toggleVisibility(id) {
   } else {
     element.classList.add('visible');
     element.classList.remove('hidden');
+  }
+}
+
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  const content = modal.getElementsByClassName('modal-content')[0];
+  content.style.animation = 'slideIn 0.5s forwards';
+
+  modal.style.animation = 'fadeIn 0.5s forwards';
+  modal.style.display = 'block';
+}
+
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  const content = modal.getElementsByClassName('modal-content')[0];
+  content.style.animation = 'slideOut 0.5s forwards';
+  setTimeout(() => {
+    modal.style.display = 'none';
+  }, 1000);
+}
+
+// Close modal when clicking outside of the modal content
+window.onclick = function(event) {
+  const modals = document.getElementsByClassName('modal');
+  for (let modal of modals) {
+    if (event.target == modal) {
+      const content = modal.getElementsByClassName('modal-content')[0];
+      content.style.animation = 'slideOut 0.5s forwards';
+
+      modal.style.animation = 'fadeOut 0.5s forwards';
+      setTimeout(() => {
+        modal.style.display = 'none';
+      }, 1000); 
+    }
   }
 }
