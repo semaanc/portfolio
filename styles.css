@@ -437,6 +437,57 @@ footer {
 
 /* ----------------------------------------------------------- */
 
+/* --------------------------- FORM -------------------------- */
+
+form {
+    font-family: var(--font-family);
+    width: 40vw;
+    min-width: 300px;
+    margin: 2vh auto;
+    padding: 2vh 2vw;
+    background: var(--background-white);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 20px;
+        border: 1px solid var(--outline-gray);
+        border-radius: 4px;
+    }
+
+    .submit-btn {
+        font-family: var(--font-family);
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: var(--primary-color);
+        color: var(--text-white);
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover {
+        background-color: var(--primary-dark);
+    }
+
+    label {
+        font-family: var(--font-family);
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        text-align: left;
+        font-weight: 600;
+    }
+}
+
+/* ----------------------------------------------------------- */
+
 /* -------------------------- SKILLS ------------------------- */
 
 #skills {
@@ -954,57 +1005,6 @@ footer {
                 color: var(--text-black);
             }
         }
-    }
-}
-
-/* ----------------------------------------------------------- */
-
-/* --------------------------- FORM -------------------------- */
-
-form {
-    font-family: var(--font-family);
-    max-width: 40vw;
-    min-width: 300px;
-    margin: 2vh auto;
-    padding: 2vh 2vw;
-    background: var(--background-white);
-    border-radius: 8px;
-    box-shadow: var(--box-shadow);
-
-    input[type="text"],
-    input[type="email"],
-    textarea {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 20px;
-        border: 1px solid var(--outline-gray);
-        border-radius: 4px;
-    }
-
-    .submit-btn {
-        font-family: var(--font-family);
-        width: 100%;
-        padding: 10px;
-        border: none;
-        background-color: var(--primary-color);
-        color: var(--text-white);
-        font-size: 1rem;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .submit-btn:hover {
-        background-color: var(--primary-dark);
-    }
-
-    label {
-        font-family: var(--font-family);
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-        text-align: left;
-        font-weight: 600;
     }
 }
 

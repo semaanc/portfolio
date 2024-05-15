@@ -7,6 +7,7 @@
     <title>My Portfolio</title>
     <link rel="icon" href="images/branding/circle-icon.png">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -1277,7 +1278,7 @@
                     </div>
                     <div class="highlight">Fall 2020 - <span class="gpa">4.00 GPA</span></div>
                     <div class="card-subheader">Issued by Northeastern University &bull;
-                        <span class="date">Dec 2020</span>
+                        <span class="date">Jan 2021</span>
                     </div>
                 </div>
 
@@ -1300,12 +1301,34 @@
                 <div class="card">
                     <div class="card-header">V. W. Perlowitz Scholarship</div>
                     <div class="card-subheader">Issued by the College of Engineering &bull;
+                        <span class="date">May 2024</span>
+                        <div class="association">Associated with Northeastern University</div>
+                    </div>
+                    <div class="card-subheader">Issued by the College of Engineering &bull;
+                        <span class="date">Sep 2022</span>
+                        <div class="association">Associated with Northeastern University</div>
+                    </div>
+                    <div class="card-subheader">Issued by the College of Engineering &bull;
                         <span class="date">Sep 2021</span>
                         <div class="association">Associated with Northeastern University</div>
                     </div>
                     <div class="card-subheader">Issued by the College of Engineering &bull;
-                        <span class="date">Jan 2021</span>
+                        <span class="date">Mar 2021</span>
                         <div class="association">Associated with Northeastern University</div>
+                    </div>
+                    <div class="card-subheader">Issued by the College of Engineering &bull;
+                        <span class="date">Dec 2020</span>
+                        <div class="association">Associated with Northeastern University</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">NU Partners Scholarship</div>
+                    <div class="card-subheader">Issued by Northeastern University &bull;
+                        <span class="date">Sep 2023</span>
+                    </div>
+                    <div class="card-subheader">Issued by Northeastern University &bull;
+                        <span class="date">Sep 2022</span>
                     </div>
                 </div>
 
@@ -1319,6 +1342,9 @@
 
                 <div class="card">
                     <div class="card-header">Board of Trustees Scholarship</div>
+                    <div class="card-subheader">Issued by Northeastern University &bull;
+                        <span class="date">Sep 2021</span>
+                    </div>
                     <div class="card-subheader">Issued by Northeastern University &bull;
                         <span class="date">Jan 2021</span>
                     </div>
@@ -1524,7 +1550,8 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="4"></textarea>
 
-                <button type="submit" class="submit-btn">Send Message</button>
+                <button class="g-recaptcha submit-btn" data-sitekey="6LdWBt4pAAAAANxiPNmud7QHd2NPJ-hx5jDT2HeD" data-callback='onSubmit' data-action='submit'>Send
+                    Message</button>
             </form>
         </section>
 
