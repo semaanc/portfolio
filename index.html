@@ -7,7 +7,7 @@
     <title>My Portfolio</title>
     <link rel="icon" href="images/branding/circle-icon.png">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdWBt4pAAAAANxiPNmud7QHd2NPJ-hx5jDT2HeD"></script>
 </head>
 
 <body>
@@ -1550,8 +1550,9 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="4"></textarea>
 
-                <button class="g-recaptcha submit-btn" data-sitekey="6LdWBt4pAAAAANxiPNmud7QHd2NPJ-hx5jDT2HeD" data-callback='onSubmit' data-action='submit'>Send
-                    Message</button>
+                <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+                
+                <button type="submit" class="submit-btn">Send Message</button>
             </form>
         </section>
 

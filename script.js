@@ -85,7 +85,8 @@ function closeModal(modalId) {
 }
 
 // Close modal when clicking outside of the modal content
-window.onclick = function(event) {
+window.onclick =
+    function(event) {
   const modals = document.getElementsByClassName('modal');
   for (let modal of modals) {
     if (event.target == modal) {
@@ -98,4 +99,23 @@ window.onclick = function(event) {
       }, 1000); 
     }
   }
+}
+
+function onSubmit(token) {
+  document.getElementById('contact-form').submit();
+}
+
+// Execute reCAPTCHA on form submission
+function executeReCaptcha(event) {
+  event.preventDefault();
+  grecaptcha.ready(function() {
+    grecaptcha.execute('YOUR_SITE_KEY', {action: 'submit'})
+        .then(function(token) {
+          // Add the token to the form
+          var recaptchaResponse =
+              document.getElementById('g-recaptcha-response');
+          recaptchaResponse.value = token;
+          document.getElementById('contact-form').submit();
+        });
+  });
 }

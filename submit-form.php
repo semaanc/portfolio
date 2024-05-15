@@ -7,8 +7,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Make the API request
     $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptcha_secret&response=$recaptcha_response");
     $response_keys = json_decode($response, true);
-    
-    if(!$response_keys["success"] || $response_keys["score"] < 0.5) {
+
+    // Debugging statements
+    error_log(print_r($response_keys, true));
+
+    if (!$response_keys["success"] || $response_keys["score"] < 0.5) {
         echo "reCAPTCHA verification failed. Please try again.";
         exit;
     }
