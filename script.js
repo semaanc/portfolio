@@ -101,21 +101,18 @@ window.onclick =
   }
 }
 
-function onSubmit(token) {
-  document.getElementById('contact-form').submit();
-}
-
-// Execute reCAPTCHA on form submission
-function executeReCaptcha(event) {
-  event.preventDefault();
-  grecaptcha.ready(function() {
-    grecaptcha.execute('YOUR_SITE_KEY', {action: 'submit'})
-        .then(function(token) {
-          // Add the token to the form
-          var recaptchaResponse =
-              document.getElementById('g-recaptcha-response');
-          recaptchaResponse.value = token;
-          document.getElementById('contact-form').submit();
-        });
+window.onload = function() {
+  document.getElementById('my-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    emailjs.sendForm('service_ku9eig4', 'template_pf4t5hd', this)
+        .then(
+            function(response) {
+              console.log('SUCCESS!', response.status, response.text);
+              alert('Message sent successfully!');
+            },
+            function(error) {
+              console.log('FAILED...', error);
+              alert('Failed to send the message, please try again.');
+            });
   });
 }
