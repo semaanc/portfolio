@@ -1,19 +1,28 @@
 window.onload = function() {
   document.body.style.display = 'block';
-  document.getElementById('my-form').addEventListener(
-      'submit', function(event) {
-        event.preventDefault();
-        emailjs.sendForm('service_ku9eig4', 'template_pf4t5hd', this)
-            .then(
-                function(response) {
-                  console.log('SUCCESS!', response.status, response.text);
-                  alert('Message sent successfully!');
-                },
-                function(error) {
-                  console.log('FAILED...', error);
-                  alert('Failed to send the message, please try again.');
-                });
-      });
+  document.getElementById('my-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const responseMessage = document.getElementById('response-message');
+    emailjs.sendForm('service_ku9eig4', 'template_pf4t5hd', this)
+      .then(
+        function (response) {
+          console.log('SUCCESS!', response.status, response.text);
+          responseMessage.innerHTML =
+            '<span class=\'success-message\'>Message sent successfully!</span>';
+          responseMessage.classList.add('fade-in');
+          form.reset();
+          setTimeout(function () {
+            responseMessage.classList.add('fade-out');
+          }, 3000);
+        },
+        function (error) {
+          console.log('FAILED...', error);
+          responseMessage.innerHTML =
+            '<span class=\'error-message\'>Failed to send message. If the issue persists contact me <a href=\'mailto:semaanceline@hotmail.com\'>here</a>!</span>';
+          responseMessage.classList.add('fade-in');
+        }
+      );
+  });
 };
 
 document.addEventListener('DOMContentLoaded', function () {
