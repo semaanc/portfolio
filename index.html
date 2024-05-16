@@ -7,7 +7,7 @@
     <title>My Portfolio</title>
     <link rel="icon" href="images/branding/circle-icon.png">
     <link rel="stylesheet" href="styles.css">
-    
+
     <!-- Contact Form EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -67,7 +67,9 @@
                         <div class="project-info">
                             <h4>RISC-V Compiler</h4>
                             <p>
-
+                                Designed a single-cycle RISC-V datapath on a PYNQ-Z2 board using SystemVerilog and
+                                Vivado, capable of executing
+                                hexadecimal ALU instructions, effectively creating a basic computer.
                             </p>
                             <a class="btn view-btn" onclick="openModal('risc-v-modal')">View Details</a>
                         </div>
@@ -86,12 +88,25 @@
                                     <!-- Description -->
                                     <div class="description">
                                         <strong>Description: </strong>
-                                        <p>Add here</p>
+                                        <ul class="description-list">
+                                            <li>Project is aimed at demonstrating core computer architecture principles
+                                                through practical, hands-on FPGA programming and design.</li>
+                                            <li>Implemented the project on the PYNQ-Z2 board, leveraging its FPGA
+                                                capabilities for efficient hardware execution.</li>
+                                            <li>Used SystemVerilog for detailed hardware description and Vivado for
+                                                synthesis, layout, and analysis.</li>
+                                            <li>Developed a single-cycle RISC-V datapath, optimizing the architecture to
+                                                handle basic computing tasks efficiently.</li>
+                                            <li>Configured the system to interpret and execute ALU instructions provided
+                                                in hexadecimal notation, simulating fundamental computer operations.
+                                            </li>
+                                        </ul>
                                     </div>
                                     <!-- Link -->
                                     <p>
                                         <strong>Link: </strong>
-                                        <a href="" target="_blank">Link</a>
+                                        <span class="restricted">Restricted access</span>. <a href=""
+                                            onfocus="closeModalContactMe('risc-v-modal')">Contact me</a> to request access.
                                     </p>
                                     <!-- Team -->
                                     <p>
@@ -116,8 +131,9 @@
                         <img src="images/projects/collision-detection.jpg" alt="Collision Detection Algorithm">
                         <div class="project-info">
                             <h4>Collision Detection Algorithm</h4>
-                            <p>Developed a collision detection algorithm using C++, DE1-SoC board, and a VGA monitor.
-                                Project presented on YouTube.</p>
+                            <p>Developed an engaging collision detection algorithm in C++, operational on a DE1-SoC
+                                board with output to a VGA monitor to showcase practical embedded systems principles.
+                            </p>
                             <a class="btn view-btn" onclick="openModal('collision-detection-modal')">View Details</a>
                         </div>
                     </article>
@@ -136,12 +152,23 @@
                                     <!-- Description -->
                                     <div class="description">
                                         <strong>Description: </strong>
-                                        <p>Add here</p>
+                                        <ul class="description-list">
+                                            <li>Project showcases embedded systems functionality by developing a
+                                                collision detection algorithm in C++.</li>
+                                            <li>Utilized the DE1-SoC board for real-time algorithm processing,
+                                                leveraging its hardware capabilities for
+                                                efficient performance.</li>
+                                            <li>Implemented the algorithm to interface with a VGA monitor, demonstrating
+                                                real-time graphical outputs.</li>
+                                            <li>Designed for connectivity to a laptop, highlighting the integration of
+                                                hardware and software components in
+                                                embedded systems.</li>
+                                        </ul>
                                     </div>
                                     <!-- Link -->
                                     <p>
                                         <strong>Link: </strong>
-                                        <a href="https://youtu.be/3y4WMHtBqCU" target="_blank">Link</a>
+                                        View <a href="https://youtu.be/3y4WMHtBqCU" target="_blank">Demo</a>
                                     </p>
                                     <!-- Team -->
                                     <p>
@@ -165,7 +192,7 @@
                         <div class="project-info">
                             <h4>Ruth Goldberg Machine </h4>
                             <p>
-
+                                Engineered an amusement park themed Rube Goldberg machine using six simple machines, multiple energy transfers, and an autonomous robot car with mechanisms controlled by Arduino programs.
                             </p>
                             <a class="btn view-btn" onclick="openModal('ruth-goldberg-modal')">View Details</a>
                         </div>
@@ -177,25 +204,66 @@
                             <span class="close-btn" onclick="closeModal('ruth-goldberg-modal')">&times;</span>
                             <h2>Ruth Goldberg Machine</h2>
                             <div class="modal-img-info">
-                                <div class="img-container">
-                                    <img src="images/projects/ruth-goldberg-machine.jpg" alt="Ruth Goldberg Machine">
-                                </div>
                                 <div class="modal-info">
-                                    <!-- Description -->
-                                    <div class="description">
-                                        <strong>Description: </strong>
-                                        <p>Add here</p>
+                                    <div class="img-container">
+                                        <img src="images/projects/ruth-goldberg-machine.jpg" alt="Ruth Goldberg Machine">
                                     </div>
                                     <!-- Link -->
                                     <p>
-                                        <strong>Link: </strong>
-                                        <a href="https://youtu.be/zNUWwAuSKhE" target="_blank">Link</a>
+                                        <strong>Links: </strong>
+                                        View <a href="https://youtu.be/zNUWwAuSKhE" target="_blank">Demo</a> and <a
+                                            href="https://github.com/semaanc/ruth-goldberg-machine" target="_blank">Documentation</a>
                                     </p>
                                     <!-- Team -->
                                     <p>
                                         <strong>Team: </strong>
                                         Celine Semaan, Trevor Lau, Jenna Rutberg, Alexander Williamson
                                     </p>
+                                </div>
+                                <div class="modal-info">
+                                    <!-- Description -->
+                                    <div class="description">
+                                        <strong>Description: </strong>
+                                        <ul class="description-list">
+                                            <li>Project demonstrated physics and engineering principles through a Rube
+                                                Goldberg machine that simulates an amusement park using various
+                                                interconnected components.</li>
+                                            <li>Included six fundamental mechanical devices:</li>
+                                            <ul class="description-list">
+                                                <li><em>Catapult:</em> Utilizes a lever mechanism powered by gravity to
+                                                    launch a projectile, demonstrating the principles of torque and
+                                                    angular acceleration.</li>
+                                                <li><em>Loop:</em> Features a circular track where a marble gains enough
+                                                    velocity from a downhill ramp to navigate the loop without falling,
+                                                    illustrating centripetal force and energy conservation.</li>
+                                                <li><em>Drawbridge:</em> Operates as both an inclined plane and a pulley
+                                                    system, where a marble triggers the drawbridge to lower, showing
+                                                    mechanics of potential and kinetic energy conversion. Arduino
+                                                    controls the motor that operates the drawbridge.</li>
+                                                <li><em>Ferris Wheel:</em> Designed as a wheel and axle, this component
+                                                    is driven by a motor controlled by Arduino, allowing it to rotate
+                                                    and exemplify rotational motion and the effects of centripetal
+                                                    acceleration on the marbles.</li>
+                                                <li><em>Elevator:</em> Acts as a lifting mechanism that elevates a
+                                                    marble to a higher point using a pulley system, highlighting the
+                                                    mechanical advantage provided by pulleys. The elevator's motor is
+                                                    also controlled by an Arduino to ensure precise operation.</li>
+                                                <li><em>Seesaw:</em> Incorporates a lever that tips when a marble is
+                                                    added to one side, balancing forces and showcasing how levers can be
+                                                    used to amplify small movements into larger actions.</li>
+                                                <li><em>Autonomous Robot Car:</em> Navigates around the system under
+                                                    Arduino control, engaging various components like the merry-go-round
+                                                    to complete the machine’s sequence.</li>
+                                                <li><em>Merry-Go-Round:</em> Operates as a wheel & axle, with the merry-go-round spinning due to the external force of the autonomous robot car, highlighting the principles of rotational dynamics and force transfer.</li>
+                                            </ul>
+                                            <li>Designed transitions between each component to ensure smooth operation
+                                                and continuous motion throughout the system.</li>
+                                            <li>Project adapted to the challenges of the COVID-19 pandemic, with two out
+                                                of four team members contributing remotely, necessitating robust virtual
+                                                communication and collaboration skills to maintain project momentum and
+                                                integrate their contributions effectively.</li>
+                                        </ul>
+                                    </div>
                                     <!-- Skills Used -->
                                     <strong>Skills Used:</strong>
                                     <div class="skills-used">
@@ -220,7 +288,7 @@
                         <div class="project-info">
                             <h4>Reversi</h4>
                             <p>
-
+                                Developed a Reversi game in Java, featuring a graphical interface with both hexagonal and square grids, supporting strategic gameplay for human and AI players.
                             </p>
                             <a class="btn view-btn" onclick="openModal('reversi-modal')">View Details</a>
                         </div>
@@ -239,12 +307,19 @@
                                     <!-- Description -->
                                     <div class="description">
                                         <strong>Description: </strong>
-                                        <p>Add here</p>
+                                        <ul class="description-list">
+                                            <li>Engineered a dynamic Java-based Reversi game, showcasing modular design for strategic depth and extendability.
+                                            </li>
+                                            <li>Designed with dual grid options—hexagonal and square—to enrich tactical gameplay and challenge players.</li>
+                                            <li>Implemented a sleek graphical interface, facilitating engaging battles between human and AI players across various configurations.</li>
+                                            <li>Enabled diverse gameplay modes such as human vs. human, human vs. AI, and AI vs. AI, each offering unique strategic experiences.</li>
+                                            <li>Equipped with intelligent AI algorithms capable of simple to complex strategies, adaptable to player actions and game settings.</li>
+                                        </ul>
                                     </div>
                                     <!-- Link -->
                                     <p>
                                         <strong>Link: </strong>
-                                        <a href="" target="_blank">Link</a>
+                                        <span class="restricted">Restricted access</span>. <a href="" onfocus="closeModalContactMe('reversi-modal')">Contact me</a> to request access.
                                     </p>
                                     <!-- Team -->
                                     <p>
@@ -263,14 +338,13 @@
                         </div>
                     </div>
 
-
                     <!-- Klondike -->
                     <article class="project-item" id="klondike">
                         <img src="images/projects/klondike.png" alt="Klondike">
                         <div class="project-info">
                             <h4>Klondike</h4>
                             <p>
-
+                                Developed a customizable command-line Klondike card game in Java with options to adjust game rules, number of draws, and layout configurations through the IntelliJ environment.
                             </p>
                             <a class="btn view-btn" onclick="openModal('klondike-modal')">View Details</a>
                         </div>
@@ -282,25 +356,41 @@
                             <span class="close-btn" onclick="closeModal('klondike-modal')">&times;</span>
                             <h2>Klondike</h2>
                             <div class="modal-img-info">
-                                <div class="img-container">
-                                    <img src="images/projects/reversi.png" alt="Reversi">
-                                </div>
                                 <div class="modal-info">
-                                    <!-- Description -->
-                                    <div class="description">
-                                        <strong>Description: </strong>
-                                        <p>Add here</p>
+                                    <div class="img-container">
+                                        <img src="images/projects/reversi.png" alt="Reversi">
                                     </div>
                                     <!-- Link -->
                                     <p>
                                         <strong>Link: </strong>
-                                        <a href="" target="_blank">Link</a>
+                                        <span class="restricted">Restricted access</span>. <a href=""
+                                            onfocus="closeModalContactMe('klondike-modal')">Contact
+                                            me</a> to request access.
                                     </p>
                                     <!-- Team -->
                                     <p>
                                         <strong>Team: </strong>
                                         Celine Semaan
                                     </p>
+                                </div>
+                                <div class="modal-info">
+                                    <!-- Description -->
+                                    <div class="description">
+                                        <strong>Description: </strong>
+                                        <ul class="description-list">
+                                            <li>Project designed to enhance understanding and practical skills in Java programming by creating an interactive Klondike card game playable via the command line.</li>
+                                            <li>Developed using Java 11 in the IntelliJ IDE, ensuring a robust development environment with full support for Java's advanced features.</li>
+                                            <li>Features three distinct game modes to customize the gameplay experience:
+                                                <ul class="description-list">
+                                                    <li><em>BASIC:</em> A standard game of Klondike, offering traditional gameplay.</li>
+                                                    <li><em>LIMITED:</em> Introduces a limit on the number of card draws, adding a strategic layer by restricting player moves.</li>
+                                                    <li><em>WHITEHEAD:</em> Modifies the classic rules by removing the high card rule and requiring builds on the same suit color, increasing complexity and difficulty.</li>
+                                                </ul>
+                                            </li>
+                                            <li>Allows customization of game settings, including the number of draws and cascade piles, enhancing user engagement through flexible game configuration.</li>
+                                            <li>Incorporated command-line interactions for game moves such as moving cards between piles and drawing from the deck, providing a hands-on approach to traditional card games.</li>
+                                        </ul>
+                                    </div>
                                     <!-- Skills Used -->
                                     <strong>Skills Used:</strong>
                                     <div class="skills-used">
@@ -1148,7 +1238,6 @@
             </div>
         </section>
 
-
         <section id="skills">
             <h2>Skills</h2>
             <div class="skills-container">
@@ -1551,22 +1640,21 @@
             <form id="my-form" action="" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
-                
+
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-                
+
                 <label for="company">Company:</label>
                 <input type="text" id="company" name="company">
-                
+
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="4"></textarea>
-                
+
                 <button type="submit" class="submit-btn">Send Message</button>
 
                 <div id="response-message"></div> <!-- Success or Failure message will appear here -->
             </form>
         </section>
-
 
     </main>
     <footer>

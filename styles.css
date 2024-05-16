@@ -21,6 +21,7 @@
     --outline-gray: #ccc;
     --grade-scale-color: rgb(30, 180, 25);
     --modal-background-color: rgba(0, 0, 0, 0.8);
+    --restricted-color: rgb(183, 0, 0);
 }
 
 * {
@@ -48,6 +49,10 @@ h3 {
     font-size: 1.5rem;
     font-weight: 600;
     padding: 3vh 2vw;
+}
+
+a {
+    color: var(--primary-color);
 }
 
 section {
@@ -1063,13 +1068,18 @@ form {
     .modal-content {
         background-color: var(--background-white);
         margin: 50px;
-        padding: 20px 50px;
+        padding: 50px;
         border: 1px solid #888;
         max-width: 100%;
         border-radius: 8px;
         box-shadow: var(--box-shadow-focus);
         color: var(--text-black);
         min-height: 86.5%;
+
+        h2 {
+            margin: 0;
+            padding: 0vh 2vw 5vh 2vw;
+        }
 
         .modal-img-info {
             display: flex;
@@ -1080,8 +1090,11 @@ form {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 50vh;
-                width: auto;
+                min-width: 40vw;
+                max-width: 40vw;
+                min-height: 60vh;
+                max-height: 60vh;
+                height: auto;
 
                 img {
                     height: 100%;
@@ -1089,6 +1102,8 @@ form {
                     object-fit: contain;
                     border-radius: 10px;
                     box-shadow: var(--box-shadow);
+                    background-color: var(--background-black);
+                    overflow: hidden;
                 }
             }
 
@@ -1097,9 +1112,28 @@ form {
                 flex-direction: column;
                 gap: 20px;
 
-                .skills-used {
+                .description {
                     margin-top: 10px;
 
+                    .description-list {
+                        margin: 20px 0px 0px 20px;
+
+                        li {
+                            margin-bottom: 10px;
+                        }
+
+                        em {
+                            font-weight: 800;
+                        }
+                    }
+                }
+
+                .restricted {
+                    color: var(--restricted-color);
+                    font-weight: 600;
+                }
+
+                .skills-used {
                     img {
                         width: 40px;
                         height: 40px;
@@ -1118,12 +1152,16 @@ form {
             cursor: pointer;
 
             &:hover, &:focus {
-                color: black;
+                color: var(--text-black);
                 text-decoration: none;
                 cursor: pointer;
             }
         }
     }
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 /* ----------------------------------------------------------- */

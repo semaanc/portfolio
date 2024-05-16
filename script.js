@@ -1,5 +1,9 @@
-window.onload = function() {
+/* Make content visible + EmailJS code */
+window.onload = function () {
   document.body.style.display = 'block';
+
+  /* ----------------------------------------------------------------------------- */
+
   document.getElementById('my-form').addEventListener('submit', function(event) {
     event.preventDefault();
     const responseMessage = document.getElementById('response-message');
@@ -23,6 +27,7 @@ window.onload = function() {
               showResponse(false);  // False for failure messages
             });
 
+    // Show response message
     function showResponse(isSuccess) {
       responseMessage.classList.remove('hidden');  // Make message visible
       responseMessage.classList.add('visible');  // Make message visible
@@ -41,6 +46,9 @@ window.onload = function() {
   });
 };
 
+/* ----------------------------------------------------------------------------- */
+
+/* Smooth scrolling */
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -52,32 +60,31 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// Set equal height for all project items
+/* ----------------------------------------------------------------------------- */
+
+/* Set equal height for all project items */
 window.addEventListener('load', setEqualHeight);
 window.addEventListener('resize', setEqualHeight);
 
 function setEqualHeight() {
+  /* For project cards */
   // Get all '.project-grid' containers
   const grids = document.querySelectorAll('.project-grid');
   const awards = document.querySelectorAll('.club-container');
 
   grids.forEach(grid => {
-    // Get all the '.project-item' elements within the current grid
     const items = grid.querySelectorAll('.project-item');
-
-    // Reset the height to auto to get the natural height
     items.forEach(item => item.style.height = 'auto');
 
-    // Calculate the maximum height among all '.project-item' elements within
-    // the current grid
     const maxHeight = Array.from(items).reduce(
         (max, item) => Math.max(max, item.offsetHeight), 0);
 
-    // Set all '.project-item' elements within the current grid to the maximum
-    // height
     items.forEach(item => item.style.height = `${maxHeight}px`);
   });
 
+  /* ----------------------------------------------------------------------------- */
+
+  /* For award cards */
   awards.forEach(award => {
     const items = award.querySelectorAll('.club-category');
 
@@ -94,6 +101,9 @@ function setEqualHeight() {
   });
 }
 
+/* ----------------------------------------------------------------------------- */
+
+/* Toggle visibility of coursework for Northeastern University */
 function toggleVisibility(id) {
   var element = document.getElementById(id);
   if (element.classList.contains('visible')) {
@@ -105,6 +115,9 @@ function toggleVisibility(id) {
   }
 }
 
+/* ----------------------------------------------------------------------------- */
+
+/* Modal functions */
 function openModal(modalId) {
   const modal = document.getElementById(modalId);
   const content = modal.getElementsByClassName('modal-content')[0];
@@ -112,6 +125,7 @@ function openModal(modalId) {
 
   modal.style.animation = 'fadeIn 0.5s forwards';
   modal.style.display = 'block';
+  document.body.classList.add('no-scroll');  // Prevent background scrolling
 }
 
 function closeModal(modalId) {
@@ -120,7 +134,8 @@ function closeModal(modalId) {
   content.style.animation = 'slideOut 0.5s forwards';
   setTimeout(() => {
     modal.style.display = 'none';
-  }, 1000);
+    document.body.classList.remove('no-scroll');  // Enable background scrolling
+  }, 500);
 }
 
 // Close modal when clicking outside of the modal content
@@ -135,7 +150,22 @@ window.onclick =
       modal.style.animation = 'fadeOut 0.5s forwards';
       setTimeout(() => {
         modal.style.display = 'none';
-      }, 1000); 
+        document.body.classList.remove('no-scroll');  // Enable background scrolling
+      }, 500); 
     }
   }
 }
+
+// Close modal and scroll to contact section
+function closeModalContactMe(modalId) {
+  closeModal(modalId);
+  const contactSection = document.getElementById('contact');
+
+  setTimeout(() => {
+    contactSection.scrollIntoView({
+      behavior: 'smooth'
+    });
+  }, 500);
+}
+
+/* ----------------------------------------------------------------------------- */
