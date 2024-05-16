@@ -452,12 +452,17 @@ form {
     input[type="text"],
     input[type="email"],
     textarea {
-        font-family: var(--font-family);
         width: 100%;
         padding: 8px;
         margin-bottom: 20px;
         border: 1px solid var(--outline-gray);
         border-radius: 4px;
+    }
+
+    input, textarea {
+        font-size: 1.1rem;
+        font-family: var(--font-family);
+        font-weight: 300;
     }
 
     .submit-btn {
@@ -489,7 +494,23 @@ form {
     #response-message {
         margin-top: 10px;
         opacity: 0;
-        transition: opacity 0.5s;
+        transition: opacity 0.5s ease-in-out;
+
+        .success-message {
+            color: rgb(2, 119, 2);
+        }
+
+        .error-message {
+            color: rgb(165, 0, 0);
+        }
+    }
+
+    .visible {
+        opacity: 1;
+    }
+
+    .hidden {
+        max-height: 0;
     }
 }
 

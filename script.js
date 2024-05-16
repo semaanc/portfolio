@@ -1,27 +1,43 @@
 window.onload = function() {
   document.body.style.display = 'block';
-  document.getElementById('my-form').addEventListener('submit', function (event) {
+  document.getElementById('my-form').addEventListener('submit', function(event) {
     event.preventDefault();
     const responseMessage = document.getElementById('response-message');
+    // Reset message visibility and previous styles
+    responseMessage.classList.remove('visible');
+    responseMessage.style.opacity = 0;
+    responseMessage.innerHTML = '';  // Clear previous content
+
     emailjs.sendForm('service_ku9eig4', 'template_pf4t5hd', this)
-      .then(
-        function (response) {
-          console.log('SUCCESS!', response.status, response.text);
-          responseMessage.innerHTML =
-            '<span class=\'success-message\'>Message sent successfully!</span>';
-          responseMessage.classList.add('fade-in');
-          form.reset();
-          setTimeout(function () {
-            responseMessage.classList.add('fade-out');
-          }, 3000);
-        },
-        function (error) {
-          console.log('FAILED...', error);
-          responseMessage.innerHTML =
-            '<span class=\'error-message\'>Failed to send message. If the issue persists contact me <a href=\'mailto:semaanceline@hotmail.com\'>here</a>!</span>';
-          responseMessage.classList.add('fade-in');
-        }
-      );
+        .then(
+            function(response) {
+              console.log('SUCCESS!', response.status, response.text);
+              responseMessage.innerHTML =
+                  '<span class=\'success-message\'>Message sent successfully!</span>';
+              showResponse(true);  // True for success messages
+            },
+            function(error) {
+              console.log('FAILED...', error);
+              responseMessage.innerHTML =
+                  '<span class=\'error-message\'>Failed to send message. If the issue persists contact me <a href=\'mailto:semaanceline@hotmail.com\'>here</a>!</span>';
+              showResponse(false);  // False for failure messages
+            });
+
+    function showResponse(isSuccess) {
+      responseMessage.classList.remove('hidden');  // Make message visible
+      responseMessage.classList.add('visible');  // Make message visible
+      responseMessage.style.opacity = 1;  // Ensure message is fully visible
+
+      if (isSuccess) {
+        setTimeout(function() {
+          responseMessage.classList.remove('visible');
+          responseMessage.style.opacity = 0;
+          setTimeout(function() {
+            responseMessage.classList.add('hidden');
+          }, 1000);
+        }, 3000);
+      }
+    }
   });
 };
 
