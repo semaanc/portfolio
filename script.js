@@ -1,5 +1,19 @@
 window.onload = function() {
   document.body.style.display = 'block';
+  document.getElementById('my-form').addEventListener(
+      'submit', function(event) {
+        event.preventDefault();
+        emailjs.sendForm('service_ku9eig4', 'template_pf4t5hd', this)
+            .then(
+                function(response) {
+                  console.log('SUCCESS!', response.status, response.text);
+                  alert('Message sent successfully!');
+                },
+                function(error) {
+                  console.log('FAILED...', error);
+                  alert('Failed to send the message, please try again.');
+                });
+      });
 };
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -99,20 +113,4 @@ window.onclick =
       }, 1000); 
     }
   }
-}
-
-window.onload = function() {
-  document.getElementById('my-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    emailjs.sendForm('service_ku9eig4', 'template_pf4t5hd', this)
-        .then(
-            function(response) {
-              console.log('SUCCESS!', response.status, response.text);
-              alert('Message sent successfully!');
-            },
-            function(error) {
-              console.log('FAILED...', error);
-              alert('Failed to send the message, please try again.');
-            });
-  });
 }
