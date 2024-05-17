@@ -1147,6 +1147,45 @@ form {
                         vertical-align: middle;
                     }
                 }
+
+                .toggle-as {
+                    cursor: pointer;
+                }
+
+                .hidden {
+                    margin: 0px 0px 0px 20px;
+                    max-height: 0;
+                    opacity: 0;
+                    overflow: hidden;
+                    transition: max-height 0.5s, opacity 0.5s ease-out, margin 0.5s 0.2s;
+                }
+
+                .visible {
+                    margin: 10px 0px 10px 20px;
+                    max-height: 100%;
+                    opacity: 1;
+                    transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
+                }
+                
+                .artist-statement {
+                    p {
+                        margin: 0px 0px 20px 0px;
+                    }
+
+                    ul li {
+                        margin: 0px 0px 20px 20px;
+
+                        strong {
+                            font-weight: 600;
+                        }
+                    }
+
+                    h5 {
+                        font-size: 1.1rem;
+                        font-weight: 600;
+                        margin-bottom: 20px;
+                    }
+                }
             }
         }
 
