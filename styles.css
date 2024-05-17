@@ -359,7 +359,7 @@ footer {
     }
 
     #projects-exp {
-        #wecookit {
+        #wecookit, #mbta-connect {
             img {
                 object-fit: contain;
                 box-shadow: none;
@@ -1104,6 +1104,12 @@ form {
                     box-shadow: var(--box-shadow);
                     background-color: var(--background-black);
                     overflow: hidden;
+                }
+            }
+
+            .dual {
+                p {
+                    margin-left: 20px;
                 }
             }
 
