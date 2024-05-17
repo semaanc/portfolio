@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #5d93e1;
-    --primary-dark: #4178be;
+    --primary-color: #3861e8;
+    --primary-dark: #0027a6;
     --primary-light: #bbc9d9;
     --background-navy: #282c34;
     --background-black: #000;
@@ -516,6 +516,10 @@ form {
     .hidden {
         max-height: 0;
     }
+
+    .required-star {
+        color: orangered;
+    }
 }
 
 .fade-in {
@@ -967,30 +971,30 @@ form {
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;
-        gap: 3vw;
+        gap: 10vw;
 
         .club-category {
-            background: var(--background-white);
-            box-shadow: var(--box-shadow);
-            border: var(--container-border);
-            border-radius: 8px;
-            padding: 30px;
-            width: 460px;
+            
 
             h3 {
                 font-size: 1.7rem;
                 font-weight: 600;
-                padding: 3vh 2vw;
+                padding: 0vh 2vw 3vh 2vw;
                 text-align: center;
-                border-bottom: 2px solid var(--primary-color);
-                margin-bottom: 30px;
+                margin-bottom: 20px;
                 color: var(--primary-color);
             }
 
             .club {
                 display: flex;
                 align-items: center;
-                margin-top: 10px;
+                margin-top: 20px;
+                background: var(--background-white);
+                box-shadow: var(--box-shadow);
+                border: var(--container-border);
+                border-radius: 8px;
+                padding: 20px;
+                width: 460px;
 
                 img {
                     width: 5rem;
