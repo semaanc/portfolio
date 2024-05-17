@@ -81,6 +81,10 @@ section {
     padding: 5vh 6vw 10vh 6vw;
 }
 
+#under-construction {
+    display: none;
+}
+
 /* ----------------------------------------------------------- */
 
 /* ------------------------ ANIMATIONS ----------------------- */
@@ -109,10 +113,31 @@ section {
 
 /* ------------------------ MEDIA QUERIES -------------------- */
 
-
 @media (max-width: 768px) {
-    .skills-container {
-        grid-template-columns: 1fr;
+    #under-construction {
+        display: block;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        background-color: var(--background-navy);
+
+        i {
+            font-size: 2.5rem;
+            color: var(--background-white);
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+    }
+
+    nav, header, main, footer {
+        display: none;
     }
 }
 
@@ -175,7 +200,7 @@ nav {
                     display: none;
                     position: absolute;
                     background-color: var(--background-black);
-                    min-width: 280px;
+                    width: 20vw;
                     box-shadow: var(--box-shadow);
                     z-index: 1001;
                     transform: translateX(-0.5rem);
@@ -306,7 +331,7 @@ footer {
 
         .project-item {
             width: 25vw;
-            min-width: 400px;
+            min-width: 300px;
             position: relative;
             background: var(--background-white);
             box-shadow: var(--box-shadow);
@@ -446,7 +471,6 @@ footer {
 form {
     font-family: var(--font-family);
     width: 40vw;
-    min-width: 300px;
     margin: 2vh auto;
     padding: 2vh 2vw;
     background: var(--background-white);
@@ -724,7 +748,7 @@ form {
                 justify-content: center;
                 margin-right: 30px;
                 gap: 15px;
-                min-width: 10vw;
+                width: 10vw;
                 padding: 20px 0px;
                 z-index: 1;
                 background: var(--background-white);
@@ -809,6 +833,7 @@ form {
                         .second-line {
                             display: flex;
                             justify-content: space-between;
+                            flex-wrap: nowrap;
 
                             h4 {
                                 margin: 0;
@@ -1093,7 +1118,7 @@ form {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                min-width: 40vw;
+                min-width: 300px;
                 max-width: 40vw;
                 min-height: 55vh;
                 max-height: 60vh;
