@@ -1215,6 +1215,7 @@ form {
         min-height: 100vh;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         width: 100%;
         background-color: var(--background-navy);
         padding: 20px;
@@ -1228,11 +1229,12 @@ form {
         .message {
             color: var(--text-white);
             font-size: 1.4rem;
-            margin-top: 20px;
-        }
+            margin-top: 30px;
+            text-align: center;
 
-        br {
-            margin-top: 20px;
+            p {
+                margin-top: 20px;
+            }
         }
     }
 
