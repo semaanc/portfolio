@@ -801,6 +801,8 @@ form {
                         .second-line {
                             display: flex;
                             justify-content: space-between;
+                            flex-wrap: wrap;
+                            gap: 10px;
 
                             h4 {
                                 margin: 0;
@@ -1211,7 +1213,8 @@ form {
 @media (max-width: 768px) {
     #under-construction {
         display: flex;
-        min-height: 100%;
+        min-height: 100vh;
+        min-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
         justify-content: center;
         align-items: center;
         flex-direction: column;
