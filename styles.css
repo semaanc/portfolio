@@ -801,7 +801,7 @@ form {
                         .second-line {
                             display: flex;
                             justify-content: space-between;
-                            flex-wrap: wrap;
+                            flex-wrap: nowrap;
                             gap: 10px;
 
                             h4 {
