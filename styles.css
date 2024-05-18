@@ -1087,7 +1087,7 @@ form {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                min-width: 300px;
+                min-width: 40vw;
                 max-width: 40vw;
                 min-height: 55vh;
                 max-height: 60vh;
