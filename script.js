@@ -44,6 +44,8 @@ window.onload = function () {
       }
     }
   });
+
+  adjustGridItems();
 };
 
 /* ----------------------------------------------------------------------------- */
@@ -169,3 +171,21 @@ function closeModalContactMe(modalId) {
 }
 
 /* ----------------------------------------------------------------------------- */
+
+function adjustGridItems() {
+  const grid = document.querySelector('.project-grid');
+  const items = grid.querySelectorAll('.project-item');
+  const itemWidth = items[0].offsetWidth;
+  const gridWidth = grid.offsetWidth;
+  const itemsPerRow = Math.floor(gridWidth / itemWidth);
+  const neededItems = itemsPerRow - (items.length % itemsPerRow);
+
+  if (neededItems > 0 && neededItems < itemsPerRow) {
+    for (let i = 0; i < neededItems; i++) {
+      const invisibleItem = document.createElement('div');
+      invisibleItem.classList.add('invisible-item');
+      grid.appendChild(invisibleItem);
+    }
+  }
+}
+window.onresize = adjustGridItems();
