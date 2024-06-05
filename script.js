@@ -50,23 +50,73 @@ window.onload = function () {
 
 /* ----------------------------------------------------------------------------- */
 
-/* Smooth scrolling */
 document.addEventListener('DOMContentLoaded', function () {
+  /* Smooth scrolling */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
       e.preventDefault();
       document.querySelector(this.getAttribute('href')).scrollIntoView({
         behavior: 'smooth'
       });
     });
   });
+
+  /* Tooltip */
+  const skills = document.querySelectorAll('.skills-used img');
+  const tooltip = document.createElement('div');
+  tooltip.className = 'tooltip';
+  document.body.appendChild(tooltip);
+
+  skills.forEach(skill => {
+    skill.addEventListener('mouseenter', function () {
+      tooltip.textContent = this.alt;
+      this.classList.add('active-skill');
+      tooltip.classList.add('show');
+      updateTooltipPosition();
+
+      if (!isTooltipFullyVisible(tooltip)) {
+        tooltip.classList.remove('show');  // Don't show if not fully visible
+      } else {
+        this.classList.add(
+            'active');  // Mark this image as active only if tooltip is visible
+      }
+    });
+
+    skill.addEventListener('mouseleave', function () {
+      this.classList.remove('active-skill');
+      tooltip.classList.remove('show');
+    });
+  });
 });
 
-/* ----------------------------------------------------------------------------- */
+function updateTooltipPosition() {
+  const tooltip = document.querySelector('.show');
+  const skillImg = document.querySelector('.active-skill')
+  if (tooltip && skillImg) {
+    const rect = skillImg.getBoundingClientRect();
+    tooltip.style.left = `${rect.left + window.scrollX + 10}px`;
+    tooltip.style.top = `${rect.bottom + window.scrollY + 5}px`;
+  }
+}
+
+// Function to check if tooltip is fully within viewport
+function isTooltipFullyVisible(tooltip) {
+  const rect = tooltip.getBoundingClientRect();
+  return (
+      rect.top >= 0 && rect.left >= 0 &&
+      rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <=
+          (window.innerWidth || document.documentElement.clientWidth));
+}
+
+/* -----------------------------------------------------------------------------
+  */
 
 /* Set equal height for all project items */
 window.addEventListener('load', setEqualHeight);
 window.addEventListener('resize', setEqualHeight);
+window.addEventListener('scroll', updateTooltipPosition);
 
 function setEqualHeight() {
   /* For project cards */
@@ -84,7 +134,8 @@ function setEqualHeight() {
     items.forEach(item => item.style.height = `${maxHeight}px`);
   });
 
-  /* ----------------------------------------------------------------------------- */
+  /* -----------------------------------------------------------------------------
+    */
 
   /* For award cards */
   awards.forEach(award => {
@@ -95,8 +146,8 @@ function setEqualHeight() {
     });
 
     const maxHeight = Array.from(items).reduce(
-      (max, item) => Math.max(max, item.offsetHeight), 0);
-    
+        (max, item) => Math.max(max, item.offsetHeight), 0);
+
     items.forEach(item => {
       item.style.height = `${maxHeight}px`;
     });
@@ -189,3 +240,5 @@ function adjustGridItems() {
   }
 }
 window.onresize = adjustGridItems();
+
+/* ----------------------------------------------------------------------------- */
