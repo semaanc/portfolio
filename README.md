@@ -63,10 +63,12 @@ This section provides my contact information, including my email address and soc
 
 - High-priority fixes:
     - Find a way to prevent 'Developer Tools' and/or 'View Page Source action'.
+    - Fix 'Contact me' button action in project modals.
+    - Clear out 'Contact Me' form content when message is sent succesfully.
+    - For the 'Request access' action, fill out the 'Contact Me' section's message content with a placeholder message based on which project the button was clicked from.
 
 - Safari Fixes:
     - Adjust scrolling speed.
-    - Adjust 'Contact me' button action in project modals.
  
 - Layout fixes:
     - Adjust padding on iPad (specifically in navigation bar).
