@@ -61,8 +61,14 @@ This section provides my contact information, including my email address and soc
 
 ## Future Improvements
 
-- Adjust the site's compatibility with mobile devices.
-- Support dark mode.
-- Adjust padding on iPad (specifically in navigation bar).
-- Adjust scrolling speed in Safari.
-- Test website on Firefox and Edge.
+- Safari Fixes:
+    - Adjust scrolling speed.
+    - Adjust 'Contact me' button action in project modals.
+ 
+- Layout fixes:
+    - Adjust padding on iPad (specifically in navigation bar).
+ 
+- General improvements:  
+    - Adjust the site's compatibility with mobile devices.
+    - Support dark mode.
+    - Test website on Firefox and Edge.
