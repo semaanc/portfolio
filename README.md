@@ -61,6 +61,9 @@ This section provides my contact information, including my email address and soc
 
 ## Future Improvements
 
+- High-priority fixes:
+    - Find a way to prevent 'Developer Tools' and/or 'View Page Source action'.
+
 - Safari Fixes:
     - Adjust scrolling speed.
     - Adjust 'Contact me' button action in project modals.
