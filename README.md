@@ -2,20 +2,22 @@
 
 Welcome to my portfolio website! This website is my way of showcasing my professional career in terms of projects, skills, and experience. I hope you find it informative and engaging. Feel free to reach out to me if you have any questions or feedback.
 
+**Website URL:** Visit my website [here](https://www.celine-semaan.com)!
+
 ## Table of Contents
 
 - Projects
-    - [Computer Engineering Projects](www.celine-semaan.com/#projects-ce)
-    - [Computer Science Projects](www.celine-semaan.com/#projects-cs)
-    - [Experience Design Projects](www.celine-semaan.com/#projects-exp)
+    - Computer Engineering Projects
+    - Computer Science Projects
+    - Experience Design Projects
 
-- [Experience](www.celine-semaan.com/#experience)
-- [Education](www.celine-semaan.com/#education)
-- [Skills](www.celine-semaan.com/#skills)
-- [Honors & Awards](www.celine-semaan.com/#awards)
-- [Clubs & Organizations](www.celine-semaan.com/#clubs)
-- [Hobbies & Interests](www.celine-semaan.com/#interests)
-- [Contact Me](www.celine-semaan.com/#contact)
+- Experience
+- Education
+- Skills
+- Honors & Awards
+- Clubs & Organizations
+- Hobbies & Interests
+- Contact Me
 
 ## Computer Engineering Projects
 
@@ -61,3 +63,6 @@ This section provides my contact information, including my email address and soc
 
 - Adjust the site's compatibility with mobile devices.
 - Support dark mode.
+- Adjust padding on iPad (specifically in navigation bar).
+- Adjust scrolling speed in Safari.
+- Test website on Firefox and Edge.
