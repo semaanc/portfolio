@@ -1,7 +1,7 @@
 {
   "name": "minify-project",
   "version": "1.0.0",
-  "description": "A project to minify JavaScript, CSS, and HTML files.",
+  "description": "A project to minify and unnest JavaScript, CSS, and HTML files.",
   "main": "minify.js",
   "scripts": {
     "minify": "node minify.js"
