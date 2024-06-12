@@ -1,4 +1,4 @@
-name: Minify JS on Push
+name: Auto-minify files
 
 on:
   push:
