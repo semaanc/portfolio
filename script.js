@@ -46,6 +46,7 @@ window.onload = function () {
   });
 
   adjustGridItems();
+  reloadStylesheets();
 };
 
 /* ----------------------------------------------------------------------------- */
@@ -246,3 +247,14 @@ function adjustGridItems() {
 window.onresize = adjustGridItems();
 
 /* ----------------------------------------------------------------------------- */
+
+function reloadStylesheets() {
+  const links = document.getElementsByTagName('link');
+  for (let i = 0; i < links.length; i++) {
+    const link = links[i];
+    if (link.rel === 'stylesheet') {
+      const href = link.href.split('?')[0];
+      link.href = href + '?v=' + new Date().getTime();
+    }
+  }
+}

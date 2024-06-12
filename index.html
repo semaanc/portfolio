@@ -18,21 +18,6 @@
             });
         })();
     </script>
-
-    <!-- Reload Stylesheets (Always) -->
-    <script type="text/javascript">
-        function reloadStylesheets() {
-            const links = document.getElementsByTagName('link');
-            for (let i = 0; i < links.length; i++) {
-                const link = links[i];
-                if (link.rel === 'stylesheet') {
-                    const href = link.href.split('?')[0];
-                    link.href = href + '?v=' + new Date().getTime();
-                }
-            }
-        }
-        window.onload = reloadStylesheets;
-    </script>
 </head>
 
 <body>
