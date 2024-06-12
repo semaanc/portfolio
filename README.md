@@ -86,6 +86,10 @@ Here is an overview of the project structure for the portfolio website. Each fol
 
 ### Folder and File Descriptions
 
+#### `/.github`
+- **workflows/**: Contains GitHub Actions workflows for automating the deployment of the website.
+    - **minify.yml**: A workflow that runs the minification script on push to the main branch.
+
 #### `/images`
 - **branding/**: Contains branding images for the website.
 - **interests/**: Contains images related to various interests.
@@ -99,6 +103,9 @@ All changes to the website should be performed on the files in this folder. The 
 - **styles.css**: The main CSS file for styling the website.
 - **script.js**: The main JavaScript file for the website.
 
+#### .gitignore
+- A file that specifies intentionally untracked files to ignore notably the node_modules folder.
+
 #### `CNAME`
 - File containing the custom domain name for the GitHub Pages site.
 
@@ -107,6 +114,12 @@ All changes to the website should be performed on the files in this folder. The 
 
 #### `minify.js`
 - A script to automate the minification and processing of CSS, JavaScript, and HTML files.
+
+#### `package-lock.json`
+- The npm package lock file that contains the exact versions of dependencies installed.
+
+#### `package.json`
+- The npm package file that contains the dependencies and scripts for the project.
 
 #### `README.md`
 - The README file that provides an overview and documentation for the project.
