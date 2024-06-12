@@ -230,25 +230,23 @@ function closeModalContactMe(modalId) {
 
     const project = document.getElementById(modalId);
     if (project) {
-      const projectNameElement = project.closest('h2');
+      const projectNameElement = project.querySelector('h2');
       if (projectNameElement) {
-        projectName = projectNameElement.textContent;
+        const projectName = projectNameElement.textContent;
+        const message = `I would like to request access to the ${projectName} project.`;
+        const textarea = document.getElementById('message');
+
+        if (textarea) {
+          textarea.value = message;
+        } else {
+          console.error('Could not find message textarea');
+        }
       } else {
-        console.error('Could not find project name');
+        console.error('Could not find project name element');
       }
     } else {
       console.error('Could not find project modal');
     }
-
-    const message = `Hi, I would like to request access to the ${projectName} project. Thank you!`;
-    const textarea = document.getElementById('message');
-
-    if (textarea) {
-      textarea.value = message;
-    } else {
-      console.error('Could not find message textarea');
-    }
-
   }, 1500);
 }
 
