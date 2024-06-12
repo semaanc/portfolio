@@ -19,7 +19,10 @@ window.onload = function () {
               responseMessage.innerHTML =
                   '<span class=\'success-message\'>Message sent successfully!</span>';
             showResponse(true);  // True for success messages
-            document.getElementById('my-form').reset(); // Clear form fields
+            setTimeout(function () {
+              document.getElementById('my-form').reset();
+            }
+            , 1000);
             },
             function(error) {
               console.log('FAILED...', error);
@@ -224,6 +227,28 @@ function closeModalContactMe(modalId) {
     contactSection.scrollIntoView({
       behavior: 'smooth'
     });
+
+    const project = document.getElementById(modalId);
+    if (project) {
+      const projectNameElement = project.closest(h2);
+      if (projectNameElement) {
+        projectName = projectNameElement.textContent;
+      } else {
+        console.error('Could not find project name');
+      }
+    } else {
+      console.error('Could not find project modal');
+    }
+
+    const message = `Hi, I would like to request access to the ${projectName} project. Thank you!`;
+    const textarea = document.getElementById('message');
+
+    if (textarea) {
+      textarea.value = message;
+    } else {
+      console.error('Could not find message textarea');
+    }
+
   }, 1500);
 }
 

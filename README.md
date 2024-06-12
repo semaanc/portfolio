@@ -22,7 +22,6 @@ Welcome to my portfolio website! This website showcases my professional career i
 ## Future Improvements
 
 - High-priority fixes:
-    - Clear out 'Contact Me' form content when the message is sent succesfully.
     - For the 'Request access' action, fill out the 'Contact Me' section's message content with a placeholder message based on which project the button was clicked from.
 
 - Safari Fixes:
@@ -93,7 +92,7 @@ All changes to the website should be performed on the files in this folder. The 
 All changes to the website should be made to the files in the `/main` folder. The files in the root directory are generated from the files in the `/main` folder.
 
 #### Minification and Processing
-The `minify.js` script automates the minification and processing of CSS, JavaScript, and HTML files. Before committing changes, run the script to update the minified files using the following command:
+The `minify.js` script automates the minification and processing of CSS, JavaScript, and HTML files. There is an automated workflow that runs this script on push to the main branch. However, if you run into issues, you can manually run the script using the following command:
 
 ```
 node minify.js
