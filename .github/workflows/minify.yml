@@ -1,0 +1,40 @@
+name: Run Minify Script on Push
+
+on:
+  push:
+    branches:
+      - main  # Or specify the branch you want to monitor
+
+jobs:
+  run-minify-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'  # Specify the Node.js version you need
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run minify script
+      run: node minify.js
+
+    - name: Configure git
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+
+    - name: Commit changes
+      run: |
+        git add .
+        git commit -m "Auto-minify files"
+
+    - name: Push changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: git push
