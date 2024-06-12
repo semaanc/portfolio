@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Run minify script
-        run: node minify.js
+        run: npm run minify
 
       - name: Commit and push changes
         run: |
