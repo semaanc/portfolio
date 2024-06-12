@@ -189,7 +189,7 @@ nav {
 
 header {
     font-size: 3rem;
-    background: url(images/branding/background.jpg) center/cover;
+    background: url(/images/branding/background.jpg) center/cover;
     color: var(--text-white);
     text-align: center;
     min-height: 100vh;

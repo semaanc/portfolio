@@ -90,14 +90,14 @@ async function replaceReferences(outputFile) {
 }
 
 // Usage
-const inputFileJS = 'script.js';
+const inputFileJS = 'main/script.js';
 const outputFileJS = 'script.min.js';
 minifyFile(inputFileJS, outputFileJS, 'js');
 
-const inputFileCSS = 'styles.css';
+const inputFileCSS = 'main/styles.css';
 const outputFileCSS = 'styles.min.css';
 minifyAndUnnestCSS(inputFileCSS, outputFileCSS);
 
-const inputFileHTML = 'home.html';
+const inputFileHTML = 'main/home.html';
 const outputFileHTML = 'index.html';
 minifyFile(inputFileHTML, outputFileHTML, 'html');

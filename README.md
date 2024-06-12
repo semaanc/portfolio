@@ -93,11 +93,14 @@ Here is an overview of the project structure for the portfolio website. Each fol
 - **projects/**: Contains images related to different projects showcased in the portfolio.
 - **skills/**: Contains images representing various skills.
 
+#### `/main`
+All changes to the website should be performed on the files in this folder. The files in the root directory are generated from the files in this folder.
+- **home.html**: The main detailed version of the homepage HTML file for the website.
+- **styles.css**: The main CSS file for styling the website.
+- **script.js**: The main JavaScript file for the website.
+
 #### `CNAME`
 - File containing the custom domain name for the GitHub Pages site.
-
-#### `home.html`
-- The main detailed version of the homepage HTML file for the website.
 
 #### `index.html`
 - The minified version of the home HTML file for optimized performance.
@@ -108,18 +111,22 @@ Here is an overview of the project structure for the portfolio website. Each fol
 #### `README.md`
 - The README file that provides an overview and documentation for the project.
 
-#### `script.js`
-- The main JavaScript file for the website.
-
 #### `script.min.js`
 - The minified version of the main JavaScript file for optimized performance.
-
-#### `styles.css`
-- The main CSS file for styling the website.
 
 #### `styles.min.css`
 - The minified version of the main CSS file for optimized performance.
 
+### Making Changes to the Website
+#### Main Files for Editing
+All changes to the website should be made to the files in the `/main` folder. The files in the root directory are generated from the files in the `/main` folder.
+
+#### Minification and Processing
+The `minify.js` script automates the minification and processing of CSS, JavaScript, and HTML files. Before committing changes, run the script to update the minified files using the following command:
+
+```
+node minify.js
+```
 
 ## Dependencies
 
