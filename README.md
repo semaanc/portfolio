@@ -93,17 +93,14 @@ Here is an overview of the project structure for the portfolio website. Each fol
 - **projects/**: Contains images related to different projects showcased in the portfolio.
 - **skills/**: Contains images representing various skills.
 
-#### `.htaccess`
-- Configuration file for web server settings.
-
 #### `CNAME`
 - File containing the custom domain name for the GitHub Pages site.
 
-#### `index.html`
-- The main HTML file for the website.
+#### `home.html`
+- The main detailed version of the homepage HTML file for the website.
 
-#### `index.min.html`
-- The minified version of the main HTML file for optimized performance.
+#### `index.html`
+- The minified version of the home HTML file for optimized performance.
 
 #### `minify.js`
 - A script to automate the minification and processing of CSS, JavaScript, and HTML files.
