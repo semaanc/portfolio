@@ -1135,6 +1135,16 @@ form {
                     font-weight: 600;
                 }
 
+                .contact-me {
+                    color: var(--primary-color);
+                    text-decoration: underline;
+
+                    &:hover {
+                        color: var(--primary-dark);
+                        cursor: pointer;
+                    }
+                }
+
                 .skills-used {
                     img {
                         width: 40px;

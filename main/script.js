@@ -223,7 +223,7 @@ function closeModalContactMe(modalId) {
     contactSection.scrollIntoView({
       behavior: 'smooth'
     });
-  }, 500);
+  }, 1500);
 }
 
 /* ----------------------------------------------------------------------------- */
