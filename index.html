@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="icon" href="images/branding/circle-icon.png">
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 
     <!-- Contact Form EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -19,6 +19,20 @@
         })();
     </script>
 
+    <!-- Reload Stylesheets (Always) -->
+    <script type="text/javascript">
+        function reloadStylesheets() {
+            const links = document.getElementsByTagName('link');
+            for (let i = 0; i < links.length; i++) {
+                const link = links[i];
+                if (link.rel === 'stylesheet') {
+                    const href = link.href.split('?')[0];
+                    link.href = href + '?v=' + new Date().getTime();
+                }
+            }
+        }
+        window.onload = reloadStylesheets;
+    </script>
 </head>
 
 <body>
@@ -2382,7 +2396,7 @@
         <p>© 2024 Celine Semaan. All rights reserved.</p>
     </footer>
 
-    <script src="script.js" type="text/javascript"></script>
+    <script type="text/javascript" src="script.js"></script>
     <script src="https://kit.fontawesome.com/a3d1cb1434.js" crossorigin="anonymous"></script>
 </body>
 
