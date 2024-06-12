@@ -18,7 +18,8 @@ window.onload = function () {
               console.log('SUCCESS!', response.status, response.text);
               responseMessage.innerHTML =
                   '<span class=\'success-message\'>Message sent successfully!</span>';
-              showResponse(true);  // True for success messages
+            showResponse(true);  // True for success messages
+            document.getElementById('my-form').reset(); // Clear form fields
             },
             function(error) {
               console.log('FAILED...', error);
