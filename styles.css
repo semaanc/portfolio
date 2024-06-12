@@ -439,20 +439,15 @@ form {
     border-radius: 8px;
     box-shadow: var(--box-shadow);
 
-    input[type="text"],
-    input[type="email"],
-    textarea {
+    input, textarea {
+        font-size: 1.1rem;
+        font-family: var(--font-family);
+        font-weight: 300;
         width: 100%;
         padding: 8px;
         margin-bottom: 20px;
         border: 1px solid var(--outline-gray);
         border-radius: 4px;
-    }
-
-    input, textarea {
-        font-size: 1.1rem;
-        font-family: var(--font-family);
-        font-weight: 300;
     }
 
     .submit-btn {
