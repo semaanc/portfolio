@@ -230,7 +230,7 @@ function closeModalContactMe(modalId) {
 
     const project = document.getElementById(modalId);
     if (project) {
-      const projectNameElement = project.closest(h2);
+      const projectNameElement = project.closest('h2');
       if (projectNameElement) {
         projectName = projectNameElement.textContent;
       } else {

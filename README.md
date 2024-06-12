@@ -21,9 +21,6 @@ Welcome to my portfolio website! This website showcases my professional career i
 
 ## Future Improvements
 
-- High-priority fixes:
-    - For the 'Request access' action, fill out the 'Contact Me' section's message content with a placeholder message based on which project the button was clicked from.
-
 - Safari Fixes:
     - Adjust scrolling speed.
  
@@ -60,7 +57,7 @@ All changes to the website should be performed on the files in this folder. The 
 - **styles.css**: The main CSS file for styling the website.
 - **script.js**: The main JavaScript file for the website.
 
-#### .gitignore
+#### `.gitignore`
 - A file that specifies intentionally untracked files to ignore notably the node_modules folder.
 
 #### `CNAME`
