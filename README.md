@@ -20,9 +20,6 @@ Welcome to my portfolio website! This website showcases my professional career i
 - Contact Me
 
 ## Future Improvements
-
-- Safari Fixes:
-    - Adjust scrolling speed.
  
 - Layout fixes:
     - Adjust padding on iPad (specifically in navigation bar).
