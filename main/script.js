@@ -55,14 +55,49 @@ window.onload = function () {
 
 /* ----------------------------------------------------------------------------- */
 
+/* Custom scrolling behavior */
+function customScrollTo(element, duration) {
+  let targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
+  let startPosition = window.pageYOffset;
+  let distance = targetPosition - startPosition;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    let timeElapsed = currentTime - startTime;
+    let run = ease(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  function ease(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+  }
+
+  requestAnimationFrame(animation);
+}
+
+function scrollToElementById(elementId, duration) {
+  let element = document.getElementById(elementId);
+  if (element) {
+    customScrollTo(element, duration);
+  } else {
+    console.error(`Element with ID '${elementId}' not found.`);
+  }
+}
+
+/* ----------------------------------------------------------------------------- */
+
 document.addEventListener('DOMContentLoaded', function () {
   /* Smooth scrolling */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
       e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
+      let targetId = this.getAttribute('href').substring(1);
+      scrollToElementById(targetId, 1000);
     });
   });
 
@@ -224,9 +259,7 @@ function closeModalContactMe(modalId) {
   const contactSection = document.getElementById('contact');
 
   setTimeout(() => {
-    contactSection.scrollIntoView({
-      behavior: 'smooth'
-    });
+    scrollToElementById('contact', 1000);
 
     const project = document.getElementById(modalId);
     if (project) {
