@@ -127,7 +127,7 @@ nav {
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    padding: 0.7rem;
+    padding: 0.7rem 5vw;
     background: var(--background-black);
     font-size: 1.2rem;
 
@@ -198,12 +198,13 @@ header {
     justify-content: center;
     align-items: center;
     gap: 5vh;
+    padding: 5vh 10vw 10vh 10vw;
 
     .logo-name {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 20px;
+        gap: 2rem;
         justify-items: center;
 
         h1 {
@@ -432,7 +433,8 @@ footer {
 
 form {
     font-family: var(--font-family);
-    width: 40vw;
+    width: 80vw;
+    max-width: 600px;
     margin: 2vh auto;
     padding: 2vh 2vw;
     background: var(--background-white);
@@ -521,7 +523,6 @@ form {
 
     .skills-container {
         display: grid;
-        min-width: 300px;
         margin: 0 auto;
         padding: 20px;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -627,7 +628,7 @@ form {
 
                             h3 {
                                 margin: 0;
-                                padding: 0;
+                                padding: 0 10px 0 0;
                             }
 
                             h5 {
@@ -635,6 +636,7 @@ form {
                                 padding: 0;
                                 font-size: 1.1rem;
                                 font-weight: 400;
+                                text-wrap: nowrap;
                             }
                         }
 
@@ -644,7 +646,7 @@ form {
 
                             h4 {
                                 margin: 0;
-                                padding: 0;
+                                padding: 0 10px 0 0;
                                 font-size: 1.2rem;
                                 font-weight: 600;
                             }
@@ -680,15 +682,19 @@ form {
     .timeline {
         position: relative;
         padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 5vw;
 
         &::before {
             content: '';
             position: absolute;
-            left: 7vw;
+            left: 71px;
             top: 30px;
             bottom: 30px;
             width: 2px;
             background-color: var(--outline-gray);
+            margin-left: 2vw;
         }
 
         .timeline-item {
@@ -718,7 +724,7 @@ form {
 
                 .timeline-icon {
                     position: relative;
-                    margin: 0 auto;
+                    margin: 0;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -749,7 +755,7 @@ form {
                 border-radius: 8px;
                 box-shadow: var(--box-shadow);
                 border: var(--container-border);
-                width: 100%;
+                width: 80vw;
 
                 .timeline-header {
                     display: flex;
@@ -776,7 +782,7 @@ form {
 
                             h3 {
                                 margin: 0;
-                                padding: 0;
+                                padding: 0 10px 0 0;
                             }
 
                             h5 {
@@ -784,6 +790,7 @@ form {
                                 padding: 0;
                                 font-size: 1.1rem;
                                 font-weight: 400;
+                                text-wrap: nowrap;
                             }
                         }
 
@@ -795,7 +802,7 @@ form {
 
                             h4 {
                                 margin: 0;
-                                padding: 0;
+                                padding: 0 10px 0 0;
                                 font-size: 1.2rem;
                                 font-weight: 600;
                             }
@@ -897,7 +904,7 @@ form {
             border: var(--container-border);
             border-radius: 8px;
             padding: 20px;
-            width: 375px;
+            min-width: 375px;
             position: relative;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
@@ -957,7 +964,6 @@ form {
         gap: 10vw;
 
         .club-category {
-            
 
             h3 {
                 font-size: 1.7rem;
@@ -977,7 +983,7 @@ form {
                 border: var(--container-border);
                 border-radius: 8px;
                 padding: 20px;
-                width: 460px;
+                width: 35vw;
 
                 img {
                     width: 5rem;
@@ -1267,14 +1273,29 @@ form {
                 margin-top: 20px;
             }
         }
+
+        button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: var(--background-navy);
+            color: var(--background-navy);
+            border: 0px;
+            cursor: pointer;
+        }
     }
 
     nav, header, main, footer {
         display: none;
     }
+}
 
-    .project-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+@media (max-width: 858px) {
+    #clubs {
+        .club-container {
+            gap: 5vw;
+        }
     }
 }
 
