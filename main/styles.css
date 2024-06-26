@@ -1247,56 +1247,16 @@ form {
 
 /* ------------------------ MEDIA QUERIES -------------------- */
 
-@media (max-width: 768px) {
-    #under-construction {
-        display: flex;
-        min-height: 100vh;
-        min-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
-        align-items: center;
-        flex-direction: column;
-        background-color: var(--background-navy);
-        padding: 20vh 10vw;
-
-        i {
-            font-size: 5rem;
-            color: var(--text-white);
-            margin-bottom: 20px;
-        }
-
-        .message {
-            color: var(--text-white);
-            font-size: 1.4rem;
-            margin-top: 30px;
-            text-align: center;
-
-            p {
-                margin-top: 20px;
-            }
-        }
-
-        button {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            padding: 10px 20px;
-            background-color: var(--background-navy);
-            color: var(--background-navy);
-            border: 0px;
-            cursor: pointer;
-        }
-    }
-
-    nav, header, main, footer {
-        display: none;
-    }
-}
-
 @media (max-width: 858px) {
     #clubs {
         .club-container {
             gap: 5vw;
         }
     }
+}
+
+#under-construction {
+    display: none;
 }
 
 /* ----------------------------------------------------------- */

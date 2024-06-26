@@ -319,15 +319,6 @@ function reloadStylesheets() {
 /* ----------------------------------------------------------------------------- */
 
 function closeUnderConstruction() {
-  const underConstruction = document.getElementById('under-construction');
-  underConstruction.style.display = 'none';
-
-  const nav = document.querySelector('nav');
-  nav.style.display = 'flex';
-  const header = document.querySelector('header');
-  header.style.display = 'flex';
-  const main = document.querySelector('main');
-  main.style.display = 'auto';
-  const footer = document.querySelector('footer');
-  footer.style.display = 'flex';
+  const underConstruction = document.getElementById('uc-styles');
+  underConstruction.parentNode.removeChild(underConstruction);
 }

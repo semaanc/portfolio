@@ -77,8 +77,8 @@ async function minifyAndUnnestCSS(inputFile, outputFile) {
 async function replaceReferences(outputFile) {
   const options = {
     files: outputFile,
-    from: [/script\.js/g, /styles\.css/g, /home\.html/g],
-    to: ['script.min.js', 'styles.min.css', 'index.html'],
+    from: [/script\.js/g, /styles\.css/g, /home\.html/g, /uc\.css/g],
+    to: ['script.min.js', 'styles.min.css', 'index.html', 'uc.min.css'],
   };
 
   try {
@@ -101,3 +101,7 @@ minifyAndUnnestCSS(inputFileCSS, outputFileCSS);
 const inputFileHTML = 'main/home.html';
 const outputFileHTML = 'index.html';
 minifyFile(inputFileHTML, outputFileHTML, 'html');
+
+const inputFileUC = 'main/uc.css';
+const outputFileUC = 'uc.min.css';
+minifyAndUnnestCSS(inputFileUC, outputFileUC);
