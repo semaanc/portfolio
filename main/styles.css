@@ -1247,12 +1247,17 @@ form {
 
 /* ------------------------ MEDIA QUERIES -------------------- */
 
-@media (max-width: 858px) {
+@media (max-width: 858px) and (min-width: 320px) {
     #clubs {
         .club-container {
             gap: 5vw;
         }
     }
+}
+
+/* Impossible width for current devices */
+@media (max-width: 319px) {
+    /* TODO: Don't display anything. */
 }
 
 #under-construction {
