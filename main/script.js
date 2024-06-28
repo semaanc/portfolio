@@ -1,5 +1,6 @@
 /* Make content visible + EmailJS code */
-window.onload = function () {
+window.onload = function() {
+  reloadStylesheets();
   document.body.style.display = 'block';
 
   /* ----------------------------------------------------------------------------- */
@@ -50,7 +51,6 @@ window.onload = function () {
   });
 
   adjustGridItems();
-  reloadStylesheets();
 };
 
 /* ----------------------------------------------------------------------------- */
