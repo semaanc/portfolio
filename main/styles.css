@@ -69,20 +69,12 @@ section {
     }
 }
 
-#skills {
-    padding: 5vh 10vw 10vh 10vw;
-}
-
 #projects-ce, #projects-cs, #projects-exp {
-    padding: 0vh 2vw 10vh 2vw;
+    padding: 0vh 5vw 10vh 5vw;
 }
 
-#education, #awards, #contact {
-    padding: 5vh 2vw 10vh 2vw;
-}
-
-#experience, #clubs, #interests {
-    padding: 5vh 6vw 10vh 6vw;
+#skills, #education, #awards, #contact, #experience, #clubs, #interests {
+    padding: 5vh 5vw 10vh 5vw;
 }
 
 #under-construction {
@@ -1256,11 +1248,19 @@ form {
             gap: 5vw;
         }
     }
+
+    #interests {
+        .interests-container {
+            .interest {
+                width: 100px;
+            }
+        }
+    }
 }
 
 /* Impossible width for current devices */
 @media (max-width: 319px) {
-    /* TODO: Don't display anything. */
+    /* Use under construction but different message */
 }
 
 #under-construction {
