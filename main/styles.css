@@ -1256,6 +1256,14 @@ form {
             }
         }
     }
+
+    #awards {
+        .awards-container {
+            .card {
+                min-width: 300px;
+            }
+        }
+    }
 }
 
 /* Impossible width for current devices */
