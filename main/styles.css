@@ -1245,7 +1245,7 @@ form {
 @media (max-width: 858px) and (min-width: 320px) {
     #clubs {
         .club-container {
-            gap: 5vw;
+            gap: 5vw; 
         }
     }
 
@@ -1261,6 +1261,23 @@ form {
         .awards-container {
             .card {
                 min-width: 300px;
+            }
+        }
+    }
+}
+
+@media (max-width: 655px) and (min-width: 320px) {
+    #clubs {
+        .club-container {
+            margin: auto;
+            flex-direction: column;
+            justify-content: center;
+            gap: 80px;
+
+            .club-category {
+                .club {
+                    width: 280px;
+                }
             }
         }
     }
