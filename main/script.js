@@ -301,6 +301,7 @@ function adjustGridItems() {
     }
   }
 }
+
 window.onresize = adjustGridItems();
 
 /* ----------------------------------------------------------------------------- */

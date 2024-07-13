@@ -674,7 +674,6 @@ form {
 
     .timeline {
         position: relative;
-        padding-left: 30px;
         display: flex;
         flex-direction: column;
         gap: 5vw;
@@ -682,12 +681,11 @@ form {
         &::before {
             content: '';
             position: absolute;
-            left: 71px;
+            left: 7.5%;
             top: 30px;
             bottom: 30px;
             width: 2px;
             background-color: var(--outline-gray);
-            margin-left: 2vw;
         }
 
         .timeline-item {
@@ -702,9 +700,8 @@ form {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                margin-right: 30px;
+                width: 15%;
                 gap: 15px;
-                width: 10vw;
                 padding: 20px 0px;
                 z-index: 1;
                 background: var(--background-white);
@@ -743,12 +740,12 @@ form {
 
             .timeline-content {
                 padding: 50px 50px;
-                margin-right: 4vw;
                 background: var(--background-white);
                 border-radius: 8px;
                 box-shadow: var(--box-shadow);
                 border: var(--container-border);
-                width: 80vw;
+                margin-left: 5%;
+                width: 80%;
 
                 .timeline-header {
                     display: flex;
