@@ -745,7 +745,8 @@ form {
                 box-shadow: var(--box-shadow);
                 border: var(--container-border);
                 margin-left: 5%;
-                width: 80%;
+                width: 75%;
+                margin-right: 5%;
 
                 .timeline-header {
                     display: flex;
