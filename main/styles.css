@@ -61,6 +61,7 @@ a {
 
 section {
     min-height: 100vh;
+    max-height: fit-content;
 
     &:not(#skills, #under-construction) {
         display: flex;
@@ -73,8 +74,8 @@ section {
     padding: 0vh 5vw 10vh 5vw;
 }
 
-#skills, #education, #awards, #contact, #experience, #clubs, #interests {
-    padding: 5vh 5vw 10vh 5vw;
+#skills, #education, #awards, #experience, #clubs, #interests {
+    padding: 3vh 5vw 10vh 5vw;
 }
 
 #under-construction {
@@ -381,7 +382,8 @@ footer {
 #contact {
     text-align: center;
     background-color: var(--background-navy); 
-    min-height: 100vh;
+    min-height: 95vh;
+    padding: 3vh 5vw 5vh 5vw;
 
     h2 {
         color: var(--text-white);
@@ -1069,7 +1071,7 @@ form {
         border-radius: 8px;
         box-shadow: var(--box-shadow-focus);
         color: var(--text-black);
-        min-height: 93.5%;
+        height: 93.5%;
 
         h2 {
             margin: 0;
