@@ -162,11 +162,6 @@ function isTooltipFullyVisible(tooltip) {
 
 /* Set equal height for all project items */
 window.addEventListener('resize', setEqualHeight);
-window.addEventListener('load', function() {
-  document.body.style.display = 'none';
-  document.body.offsetHeight; // Trigger a reflow
-  document.body.style.display = 'block';
-});
 
 function setEqualHeight() {
   /* For project cards */
