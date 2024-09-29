@@ -1,6 +1,7 @@
 /* Make content visible + EmailJS code */
 window.onload = function() {
   reloadStylesheets();
+  
   /* ----------------------------------------------------------------------------- */
 
   document.getElementById('my-form').addEventListener('submit', function(event) {
@@ -49,7 +50,10 @@ window.onload = function() {
   });
 
   adjustGridItems();
-  document.body.style.display = 'block';
+  
+  setTimeout(function() {
+    document.body.style.display = 'block';
+  }, 500);
 };
 
 /* ----------------------------------------------------------------------------- */
