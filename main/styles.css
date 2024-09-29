@@ -282,12 +282,18 @@ footer {
         max-width: 100%;
 
         .project-item {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             position: relative;
             background: var(--background-white);
             box-shadow: var(--box-shadow);
             border: var(--container-border);
             border-radius: 8px;
             overflow: hidden;
+            margin: 0;
+            padding: 0;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             padding: 30px 20px;
 
@@ -950,12 +956,15 @@ form {
 
 #clubs {
     background: var(--section-background);
+    height: 100%;
 
     .club-container {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;
+        display: flex;
+        height: 100%;
         gap: 10vw;
 
         .club-category {
@@ -979,11 +988,14 @@ form {
                 border-radius: 8px;
                 padding: 20px;
                 width: 35vw;
+                height: 100%;
+                overflow: hidden;
 
                 img {
                     width: 5rem;
                     height: 5rem;
                     margin-right: 15px;
+                    object-fit: cover;
                 }
 
                 p {
