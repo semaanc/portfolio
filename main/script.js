@@ -50,10 +50,10 @@ window.onload = function() {
   });
 
   adjustGridItems();
-  
+
   setTimeout(function() {
     document.body.style.display = 'block';
-  }, 500);
+  }, 1000);
 };
 
 /* ----------------------------------------------------------------------------- */
