@@ -622,6 +622,7 @@ form {
 
                         .first-line {
                             display: flex;
+                            flex-direction: row;
                             justify-content: space-between;
                             align-items: center;
                             margin-bottom: 1vh;
@@ -636,8 +637,6 @@ form {
                                 padding: 0;
                                 font-size: 1.1rem;
                                 font-weight: 400;
-                                text-wrap: nowrap;
-                                overflow-x: hidden;
                             }
                         }
 
@@ -789,16 +788,12 @@ form {
                                 padding: 0;
                                 font-size: 1.1rem;
                                 font-weight: 400;
-                                text-wrap: nowrap;
-                                overflow-x: hidden;
                             }
                         }
 
                         .second-line {
                             display: flex;
                             justify-content: space-between;
-                            flex-wrap: nowrap;
-                            overflow-x: hidden;
                             gap: 10px;
 
                             h4 {
