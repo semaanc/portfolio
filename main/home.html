@@ -69,12 +69,74 @@
     </section>
 
     <main>
-        <!-- TODO: Add capstone project + refine existing ones -->
         <section id="projects">
             <h2>Projects</h2>
             <section id="projects-ce">
                 <h3>Computer Engineering Projects</h3>
                 <div class="project-grid">
+                    <!-- Capstone Project: Ro-Boat -->
+                    <article class="project-item" id="roboat">
+                        <img src="/images/projects/roboat.png" alt="The Ro-Boat">
+                        <div class="project-info">
+                            <h4>The Ro-Boat: An Autonomous Lifeguard for Efficient Water Rescue</h4>
+                            <p>
+                                Designed and developed an autonomous aquatic robot equipped with YOLO-based person detection and real-time navigation for lifeguard operations.
+                            </p>
+                            <a class="btn view-btn" onclick="openModal('roboat-modal')">View Details</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Modal Structure -->
+                    <div id="roboat-modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeModal('roboat-modal')">&times;</span>
+                            <h2>The Ro-Boat: An Autonomous Lifeguard for Efficient Water Rescue</h2>
+                            <div class="modal-img-info">
+                                <div class="img-container">
+                                    <img src="/images/projects/roboat.png" alt="The Ro-Boat">
+                                </div>
+                                <div class="modal-info">
+                                    <!-- Description -->
+                                    <div class="description">
+                                        <strong>Description: </strong>
+                                        <ul class="description-list">
+                                            <li>Engineered a fully autonomous aquatic robot for life-saving operations in water.</li>
+                                            <li>Designed a YOLO-based object detection algorithm for locating individuals in water
+                                                with high accuracy.</li>
+                                            <li>Integrated a real-time navigation system utilizing Pixhawk 4 and Raspberry Pi 5,
+                                                enabling seamless manual and autonomous control modes.</li>
+                                            <li>Implemented the MAVLink protocol to facilitate reliable communication between
+                                                hardware components.</li>
+                                            <li>Employed OpenCV for dynamic tracking and image processing to identify and
+                                                locate rescue targets.</li>
+                                            <li>Conducted rigorous manual and automatic testing to ensure robust and efficient
+                                                performance in diverse water conditions.</li>
+                                        </ul>
+                                    </div>
+                                    <!-- Link -->
+                                    <p>
+                                        <strong>Link: </strong>
+                                        View <a href="https://youtu.be/p1gmChZ3njY" target="_blank">Demo</a> video.
+                                    </p>
+                                    <!-- Team -->
+                                    <p>
+                                        <strong>Team: </strong>
+                                        Celine Semaan, Lia Shechter, Shane Lerkvikarn, Oliver Hugh, Kevin Su, Mike Sekenski
+                                    </p>
+                                    <!-- Skills Used -->
+                                    <strong>Skills Used:</strong>
+                                    <div class="skills-used">
+                                        <img src="/images/skills/opencv.png" alt="OpenCV">
+                                        <img src="/images/skills/mavlink.png" alt="MAVLink">
+                                        <img src="/images/skills/raspberrypi.png" alt="Raspberry Pi">
+                                        <img src="/images/skills/yolo.png" alt="YOLO Algorithm">
+                                        <img src="/images/skills/pixhawk.png" alt="Pixhawk 4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- RISC-V Compiler -->
                     <article class="project-item" id="risc-v">
                         <img src="/images/projects/risc-v.png" alt="RISC-V Compiler">
@@ -301,10 +363,75 @@
                 </div>
             </section>
 
-            <!-- TODO: Add software engineering project + refine existing ones -->
             <section id="projects-cs">
                 <h3>Computer Science Projects</h3>
                 <div class="project-grid">
+
+                    <!-- ByteBuddies Project -->
+                    <article class="project-item" id="bytebuddies">
+                        <img src="/images/projects/bytebuddies.png" alt="ByteBuddies">
+                        <div class="project-info">
+                            <h4>ByteBuddies</h4>
+                            <p>
+                                Engineered a full-stack social media platform with interactive Q&A and gaming features, showcasing an
+                                intuitive frontend and robust backend capabilities.
+                            </p>
+                            <a class="btn view-btn" onclick="openModal('bytebuddies-modal')">View Details</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Modal Structure -->
+                    <div id="bytebuddies-modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeModal('bytebuddies-modal')">&times;</span>
+                            <h2>ByteBuddies</h2>
+                            <div class="modal-img-info">
+                                <div class="img-container">
+                                    <img src="/images/projects/bytebuddies.png" alt="ByteBuddies">
+                                </div>
+                                <div class="modal-info">
+                                    <!-- Description -->
+                                    <div class="description">
+                                        <strong>Description: </strong>
+                                        <ul class="description-list">
+                                            <li>Developed a social media platform with Q&A and gaming features, enhancing interactive user
+                                                engagement.</li>
+                                            <li>Designed an intuitive frontend using React.js, TypeScript, and Material UI for seamless user
+                                                interaction.</li>
+                                            <li>Built a robust backend with Node.js, MongoDB, and socket programming for real-time data
+                                                exchange and multiplayer gaming.</li>
+                                            <li>Integrated Redux for state management, ensuring a cohesive and responsive application
+                                                experience.</li>
+                                            <li>Implemented end-to-end automated testing using Cypress, and unit testing with Jest and
+                                                Mongoose for reliability and robustness.</li>
+                                        </ul>
+                                    </div>
+                                    <!-- Link -->
+                                    <p>
+                                        <strong>Link: </strong>
+                                        View <a href="https://bytebuddies.netlify.app/" target="_blank">Website</a>.
+                                    </p>
+                                    <!-- Team -->
+                                    <p>
+                                        <strong>Team: </strong>
+                                        Celine Semaan, Ben Aronow, Karyna Yen, Kevin Vasquez
+                                    </p>
+                                    <!-- Skills Used -->
+                                    <strong>Skills Used:</strong>
+                                    <div class="skills-used">
+                                        <img src="/images/skills/react.png" alt="React.js">
+                                        <img src="/images/skills/typescript.png" alt="TypeScript">
+                                        <img src="/images/skills/materialui.png" alt="Material UI">
+                                        <img src="/images/skills/nodejs.png" alt="Node.js">
+                                        <img src="/images/skills/mongodb.png" alt="MongoDB">
+                                        <img src="/images/skills/redux.png" alt="Redux">
+                                        <img src="/images/skills/cypress.png" alt="Cypress">
+                                        <img src="/images/skills/jest.png" alt="Jest">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Reversi -->
                     <article class="project-item" id="reversi">
@@ -737,10 +864,74 @@
                 </div>
             </section>
 
-            <!-- TODO: Add experience design project + refine existing ones -->
             <section id="projects-exp">
                 <h3>Experience Design Projects</h3>
                 <div class="project-grid">
+
+                    <!-- Fens Unfenced -->
+                    <article class="project-item" id="fens-unfenced">
+                        <img src="/images/projects/fens-brochure.png" alt="Fens Unfenced">
+                        <div class="project-info">
+                            <h4>Fens Unfenced</h4>
+                            <p>
+                                Developed a communication campaign to enhance public engagement with the Fenway Victory Gardens,
+                                focusing on storytelling, accessibility, and historical preservation.
+                            </p>
+                            <a class="btn view-btn" onclick="openModal('fens-unfenced-modal')">View Details</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Modal Structure -->
+                    <div id="fens-unfenced-modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeModal('fens-unfenced-modal')">&times;</span>
+                            <h2>Fens Unfenced</h2>
+                            <div class="modal-img-info">
+                                <div class="img-container">
+                                    <img src="/images/projects/fens-unfenced.png" alt="Fens Unfenced">
+                                </div>
+                                <div class="modal-info">
+                                    <!-- Description -->
+                                    <div class="description">
+                                        <strong>Description: </strong>
+                                        <ul class="description-list">
+                                            <li>Focused on promoting SDG 11.2: Sustainable Cities and Communities, with an emphasis on
+                                                protecting cultural and natural heritage.</li>
+                                            <li>Researched visitor perceptions and awareness through surveys, interviews, and observations
+                                                to identify barriers to public engagement.</li>
+                                            <li>Developed and implemented storytelling strategies to highlight the historical significance
+                                                of the Fenway Victory Gardens.</li>
+                                            <li>Created a seasonal brochure featuring an improved map, event information, and historical
+                                                context to enhance visitor navigation and understanding.</li>
+                                            <li>Designed welcoming entrance archways and signage to improve the garden's visual appeal and
+                                                accessibility.</li>
+                                            <li>Proposed public plot redesigns to better differentiate private and public areas, fostering a
+                                                more inclusive atmosphere.</li>
+                                        </ul>
+                                    </div>
+                                    <!-- Link -->
+                                    <p>
+                                        <strong>Link: </strong>
+                                        View the <a href="https://drive.google.com/file/d/1IueUYlPKYUdhV6au4JlQ-KKlBnOV3zr2/view?usp=sharing"
+                                            target="_blank">Proposal</a></a>.
+                                    </p>
+                                    <!-- Team -->
+                                    <p>
+                                        <strong>Team: </strong>
+                                        Celine Semaan, Alexis Montante, Tanisha Gaikwad
+                                    </p>
+                                    <!-- Skills Used -->
+                                    <strong>Skills Used:</strong>
+                                    <div class="skills-used">
+                                        <img src="/images/skills/figma.png" alt="Figma">
+                                        <img src="/images/skills/html5.png" alt="HTML5">
+                                        <img src="/images/skills/photoshop.png" alt="Adobe Photoshop">
+                                        <img src="/images/skills/canva.png" alt="Canva">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- AllSimpleRecipes Google Extension -->
                     <article class="project-item" id="allsimplerecipes">
@@ -2046,6 +2237,7 @@
                     <h3 id="organization-tools">Organization Tools & Documentation Methods</h3>
                     <div class="skill-icons">
                         <div><img src="/images/skills/miro.png" alt="Miro"> Miro</div>
+                        <div><img src="/images/skills/canva.png" alt="Canva"></div>
                         <div><img src="/images/skills/design-specifications.png" alt="Design Specifications"> Design
                             Specifications</div>
                         <div><img src="/images/skills/user-story-development.png" alt="User Story Development"> User
