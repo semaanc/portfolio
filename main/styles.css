@@ -528,14 +528,6 @@ form {
         grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
         gap: 20px;
 
-        #programming-languages {
-            padding: 3vh 3vw;
-        }
-
-        #organization-tools {
-            padding: 3vh 1vw;
-        }
-
         .skill-category {
             background-color: var(--background-white);
             box-shadow: var(--box-shadow);
@@ -543,9 +535,11 @@ form {
             border-radius: 8px;
             padding: 20px;
 
-            h3 {
+            .skill-title {
                 color: var(--text-black); 
                 text-align: center;
+                min-height: 6rem;
+                padding-bottom: 0;
             }
 
             .skill-icons {
