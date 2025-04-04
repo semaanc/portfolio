@@ -662,10 +662,9 @@ form {
                     display: flex;
                     flex-direction: column;
                     gap: 5px;
-                    margin-top: 2vh;
+                    margin-top: 3vh;
                     margin-left: 4rem;
                     padding-left: 40px;
-                    padding-right: 15vw;
                 }
             }
         }
