@@ -1069,7 +1069,7 @@ form {
         border-radius: 8px;
         box-shadow: var(--box-shadow-focus);
         color: var(--text-black);
-        height: 93.5%;
+        min-height: 93.5%;
 
         h2 {
             margin: 0;
