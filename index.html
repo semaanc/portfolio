@@ -2,11 +2,10 @@
 <html lang=en>
 <head>
 <meta charset=UTF-8>
-<meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+<meta name=viewport content="width=device-width,initial-scale=1">
 <title>My Portfolio</title>
 <link rel=icon href=/images/branding/circle-icon.png>
 <link rel=stylesheet href=styles.min.css media=all>
-<link rel=stylesheet href=uc.min.css id=uc-styles>
 <script src=https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js></script>
 <script>emailjs.init({publicKey:"uYyDQuLKtNz-Bkg0h"})</script>
 </head>
@@ -41,17 +40,6 @@
 <a class=header-link href=#projects-exp>Experience Designer</a>
 </p>
 </header>
-<section id=under-construction>
-<i class="fa-solid fa-screwdriver-wrench"></i>
-<div class=message>
-<p>Website is being optimized for viewing on mobile devices.</p>
-<br>
-<p>Please visit the site on a desktop or tablet for the full experience.</p>
-<br>
-<p>Your patience is appreciated!</p>
-<button onclick=closeUnderConstruction()>Close</button>
-</div>
-</section>
 <main>
 <section id=experience>
 <h2>Experience</h2>
@@ -66,16 +54,17 @@
 </div>
 <div class=second-line>
 <h4 class=company>SharkNinja</h4>
-<h4>Jul 2025 &ndash; Current</h4>
+<h4>Jun 2025 &ndash; Current</h4>
 </div>
 </div>
 </div>
 <ul class=details>
-<li>Developed and maintained cross-platform mobile automation using Python, Appium, and Pytest, integrated into Jenkins CI/CD pipelines by partnering with firmware and cloud teams to verify end-to-end system performance and behavior.</li>
-<li>Built and executed load and reliability tests leveraging MQTT messaging and Protobuf-based data exchange for device-cloud communication validation.</li>
-<li>Utilized API testing tools and custom Python scripts to verify system integrations and backend responses.</li>
-<li>Refactored automation code for modularity, reusability, and stability, improving test reliability across Android and iOS.</li>
-<li>Automated test data collection and reporting through structured logs and CI-linked artifacts.</li>
+<li>Driving development of cross-platform mobile automation frameworks using Python, Appium, and Pytest, integrated with Jenkins and Bitbucket Pipelines to validate end-to-end user flows across iOS and Android.</li>
+<li>Architected a PostgreSQL-backed test results system and implemented tooling to publish results to Confluence, Jira, and Xray; built Metabase dashboards to visualize failure trends, test reliability, and performance metrics, and leveraged LLM-based tooling to streamline data querying and analysis.</li>
+<li>Created an AI-assisted test generation tool using a Claude MCP server integrated with Appium to generate test cases and identify page objects, accelerating automation development and reducing manual scripting effort.</li>
+<li>Designed and prototyped custom 3D-printed fixtures in CAD for hardware-in-the-loop automation with Raspberry Pi, SSH, and servos, enabling hands-off robot pairing and onboarding validation.</li>
+<li>Built an automated multilingual voice validation pipeline using Whisper and translation APIs to transcribe and validate audio against defined requirements, detecting punctuation, localization, and content inconsistencies.</li>
+<li>Developed and executed load and reliability testing using MQTT and Protobuf to validate device-cloud communication and system performance under real-world conditions.</li>
 </ul>
 </div>
 </div>
@@ -85,21 +74,19 @@
 <img src=/images/logos/sharkninja.png alt=SharkNinja>
 <div class=line-container>
 <div class=first-line>
-<h3>Technical Software Program Manager Co-Op</h3>
+<h3>Software Technical Program Manager Co-Op</h3>
 <h5>Needham, MA, United States</h5>
 </div>
 <div class=second-line>
 <h4 class=company>SharkNinja</h4>
-<h4>Jan 2025 &ndash; Jul 2025</h4>
+<h4>Jan 2025 &ndash; Jun 2025</h4>
 </div>
 </div>
 </div>
 <ul class=details>
-<li>Led end-to-end execution of the cross-functional robovacuum beta testing programs across CenterCode and Jira, driving user engagement, issue triage, RCA coordination, and risk tracking.</li>
+<li>Led end-to-end execution of the cross-functional robovacuum beta testing programs across CenterCode and Jira, driving user engagement, issue triage, RCA coordination, and release-risk visibility.</li>
 <li>Built AWS Quicksight dashboards using DOMO and CCT logs to visualize robot errors/warnings, map them to user DSNs, and analyze top recurring issues for data-driven prioritization.</li>
-<li>Owned scalable issue-tracking infrastructure through custom Jira workflows and automations, reducing manual tracking by 80% and improving global team visibility.</li>
-<li>Collaborated with cross-functional teams on robotic vacuum development to define project scopes, align schedules and streamline communication.</li>
-<li>Facilitated issue resolution and risk mitigation, leveraging AWS Cloudberry S3 and Call Center Tools to pull logs for RCA.</li>
+<li>Owned scalable issue-tracking infrastructure through custom Jira workflows and automations, reducing manual tracking by 80% and improved visibility across globally distributed teams.</li>
 </ul>
 </div>
 </div>
@@ -1337,12 +1324,12 @@ Celine Semaan, Karim Semaan
 <h3>Northeastern University</h3>
 <h5>Boston, MA, United States</h5>
 </div>
-<div class=second-line>
+<div class="second-line gpa-row">
 <h4 class=degree-type>BSc in Computer Engineering & Computer Science with a Minor in Experience Design</h4>
 <h4 style=display:flex;flex-direction:row;gap:5px>GPA:
 <span class=grade-scale>3.98</span></h4>
 </div>
-<div class=second-line>
+<div class="second-line degree-row">
 <h4 class=degree-received>Degree Received &mdash; <span class=grade-scale>Summa Cum Laude</span></h4>
 </div>
 </div>
@@ -1351,7 +1338,7 @@ Celine Semaan, Karim Semaan
 <div class=course-col>
 <div class=course-entry>
 <h4 onclick='toggleVisibility("ce")'>
-Computer Engineering Courses <i class="fa-solid fa-chevron-down"></i>
+Computer Engineering <span class=toggle-tail>Courses <i class="fa-solid fa-chevron-down"></i></span>
 </h4>
 <ul id=ce class=hidden>
 <li>EECE Capstone</li>
@@ -1368,7 +1355,7 @@ Computer Engineering Courses <i class="fa-solid fa-chevron-down"></i>
 </div>
 <div class=course-entry>
 <h4 onclick='toggleVisibility("cs")'>
-Computer Science Courses <i class="fa-solid fa-chevron-down"></i>
+Computer Science <span class=toggle-tail>Courses <i class="fa-solid fa-chevron-down"></i></span>
 </h4>
 <ul id=cs class=hidden>
 <li>Software Engineering</li>
@@ -1384,7 +1371,7 @@ Computer Science Courses <i class="fa-solid fa-chevron-down"></i>
 </div>
 <div class=course-entry>
 <h4 onclick='toggleVisibility("ed")'>
-Experience Design Courses <i class="fa-solid fa-chevron-down"></i>
+Experience Design <span class=toggle-tail>Courses <i class="fa-solid fa-chevron-down"></i></span>
 </h4>
 <ul id=ed class=hidden>
 <li>Experience Design Principles</li>
@@ -1397,7 +1384,7 @@ Experience Design Courses <i class="fa-solid fa-chevron-down"></i>
 <div class=course-col>
 <div class=course-entry>
 <h4 onclick='toggleVisibility("sm")'>
-Core Sciences & Math <i class="fa-solid fa-chevron-down"></i>
+Core Sciences & <span class=toggle-tail>Math <i class="fa-solid fa-chevron-down"></i></span>
 </h4>
 <ul id=sm class=hidden>
 <li>Differential Equations & Linear Algebra</li>
@@ -1409,7 +1396,7 @@ Core Sciences & Math <i class="fa-solid fa-chevron-down"></i>
 </div>
 <div class=course-entry>
 <h4 onclick='toggleVisibility("ge")'>
-General Education <i class="fa-solid fa-chevron-down"></i>
+General <span class=toggle-tail>Education <i class="fa-solid fa-chevron-down"></i></span>
 </h4>
 <ul id=ge class=hidden>
 <li>Advanced Writing in the Technical Professions</li>
@@ -1483,7 +1470,9 @@ General Education <i class="fa-solid fa-chevron-down"></i>
 <div class=second-line>
 <h4 class=degree-type>Scientific French Baccalaureate with a Math Concentration
 </h4>
-<h4 style=text-wrap:nowrap;overflow-x:hidden class=grade-scale>High Honors</h4>
+<h4 class=honor-label>Honors:
+<span class=grade-scale>High Honors</span>
+</h4>
 </div>
 </div>
 </div>
@@ -1601,9 +1590,12 @@ General Education <i class="fa-solid fa-chevron-down"></i>
 <div class=skill-icons>
 <div><img src=/images/skills/git.png alt=Git> Git</div>
 <div><img src=/images/skills/github.png alt=GitHub> GitHub</div>
-<div><img src=/images/skills/bitbucket.png alt=Bitbucket> Bitbucket</div>
+<div><img src=/images/skills/bitbucket.png alt=Bitbucket> Bitbucket Pipelines</div>
 <div><img src=/images/skills/jenkins.png alt=Jenkins> Jenkins</div>
-<div><img src=/images/skills/jira.png alt=Jira>Jira</div>
+<div><img src=/images/skills/jira.png alt=Jira> Jira</div>
+<div><img src=/images/skills/embedded-scripting.png alt="Embedded Scripting"> Embedded Scripting</div>
+<div><img src=/images/skills/postgresql.png alt=PostgreSQL> PostgreSQL</div>
+<div><img src=/images/skills/claude.png alt=Claude> Claude</div>
 <div><img src=/images/skills/postman.png alt=Postman> Postman</div>
 <div><img src=/images/skills/aws.png alt=AWS> AWS</div>
 <div><img src=/images/skills/appium.png alt=Appium> Appium</div>
@@ -1634,12 +1626,14 @@ General Education <i class="fa-solid fa-chevron-down"></i>
 <div><img src=/images/skills/premiere-pro.png alt="Adobe Premiere Pro"> Adobe Premiere Pro
 </div>
 <div><img src=/images/skills/final-cut-pro.png alt="Final Cut Pro"> Final Cut Pro</div>
+<div><img src=/images/skills/capcut.png alt=CapCut> CapCut</div>
 </div>
 </div>
 <div class=skill-category>
 <h3 class=skill-title>Organization Tools & Documentation Methods</h3>
 <div class=skill-icons>
 <div><img src=/images/skills/confluence.png alt=Confluence> Confluence</div>
+<div><img src=/images/skills/metabase.png alt=Metabase> Metabase</div>
 <div><img src=/images/skills/miro.png alt=Miro> Miro</div>
 <div><img src=/images/skills/canva.png alt=Canva> Canva</div>
 <div><img src=/images/skills/design-specifications.png alt="Design Specifications"> Design Specifications</div>
