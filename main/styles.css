@@ -124,14 +124,31 @@ nav {
         background: transparent;
         padding: 0;
         cursor: pointer;
+        position: relative;
+        width: 24px;
+        height: 16px;
 
         span {
             display: block;
+            position: absolute;
+            left: 0;
             width: 24px;
             height: 2px;
-            margin: 5px 0;
             background: var(--text-white);
             transition: transform 0.25s ease, opacity 0.25s ease;
+            transform-origin: center;
+        }
+
+        span:nth-child(1) {
+            top: 0;
+        }
+
+        span:nth-child(2) {
+            top: 7px;
+        }
+
+        span:nth-child(3) {
+            top: 14px;
         }
     }
 
@@ -1525,18 +1542,32 @@ form {
 
         .nav-toggle {
             display: block;
-            width: fit-content;
+            box-sizing: content-box;
+            width: 20px;
+            height: 20px;
             margin-left: auto;
             position: relative;
             z-index: 1;
-            padding: 0.5rem 0.6rem;
+            padding: 0.5rem;
             background: var(--background-black);
             border-radius: 999px;
             box-shadow: 0 8px 22px rgba(0, 0, 0, 0.24);
 
             span {
                 width: 20px;
-                margin: 4px 0;
+                left: 0.5rem;
+            }
+
+            span:nth-child(1) {
+                top: 0.625rem;
+            }
+
+            span:nth-child(2) {
+                top: calc(0.625rem + 6px);
+            }
+
+            span:nth-child(3) {
+                top: calc(0.625rem + 12px);
             }
         }
 
@@ -1607,7 +1638,7 @@ form {
 
                 &.dropdown {
                     .dropdown-content {
-                        display: none;
+                        display: flex;
                         position: static;
                         transform: none;
                         width: 100%;
@@ -1617,6 +1648,11 @@ form {
                         flex-direction: column;
                         gap: 0.25rem;
                         padding: 0.25rem 0 0.1rem;
+                        max-height: 0;
+                        opacity: 0;
+                        overflow: hidden;
+                        pointer-events: none;
+                        transition: max-height 0.28s ease, opacity 0.2s ease;
 
                         a {
                             text-align: center;
@@ -1625,9 +1661,10 @@ form {
                         }
                     }
 
-                    &.open .dropdown-content,
-                    &:focus-within .dropdown-content {
-                        display: flex;
+                    &.open .dropdown-content {
+                        max-height: 220px;
+                        opacity: 1;
+                        pointer-events: auto;
                     }
                 }
             }
