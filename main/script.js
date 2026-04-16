@@ -50,10 +50,7 @@ window.onload = function() {
   });
 
   adjustGridItems();
-
-  setTimeout(function() {
-    document.body.style.display = 'block';
-  }, 1000);
+  setEqualHeight();
 };
 
 /* ----------------------------------------------------------------------------- */
@@ -167,6 +164,13 @@ function isTooltipFullyVisible(tooltip) {
 window.addEventListener('resize', setEqualHeight);
 
 function setEqualHeight() {
+  if (window.innerWidth <= 700) {
+    document.querySelectorAll('.project-item, .club-category').forEach(item => {
+      item.style.height = 'auto';
+    });
+    return;
+  }
+
   /* For project cards */
   // Get all '.project-grid' containers
   const grids = document.querySelectorAll('.project-grid');
@@ -288,20 +292,39 @@ function closeModalContactMe(modalId) {
 /* ----------------------------------------------------------------------------- */
 
 function adjustGridItems() {
-  const grid = document.querySelector('.project-grid');
-  const items = grid.querySelectorAll('.project-item');
-  const itemWidth = items[0].offsetWidth;
-  const gridWidth = grid.offsetWidth;
-  const itemsPerRow = Math.floor(gridWidth / itemWidth);
-  const neededItems = itemsPerRow - (items.length % itemsPerRow);
+  const grids = document.querySelectorAll('.project-grid');
 
-  if (neededItems > 0 && neededItems < itemsPerRow) {
-    for (let i = 0; i < neededItems; i++) {
-      const invisibleItem = document.createElement('div');
-      invisibleItem.classList.add('invisible-item');
-      grid.appendChild(invisibleItem);
+  grids.forEach(grid => {
+    grid.querySelectorAll('.invisible-item').forEach(item => item.remove());
+
+    if (window.innerWidth <= 900) {
+      return;
     }
-  }
+
+    const items = grid.querySelectorAll('.project-item');
+    if (!items.length) {
+      return;
+    }
+
+    const itemWidth = items[0].offsetWidth;
+    const gridWidth = grid.offsetWidth;
+    const itemsPerRow = Math.floor(gridWidth / itemWidth);
+
+    if (itemsPerRow <= 1) {
+      return;
+    }
+
+    const remainder = items.length % itemsPerRow;
+    const neededItems = remainder === 0 ? 0 : itemsPerRow - remainder;
+
+    if (neededItems > 0) {
+      for (let i = 0; i < neededItems; i++) {
+        const invisibleItem = document.createElement('div');
+        invisibleItem.classList.add('invisible-item');
+        grid.appendChild(invisibleItem);
+      }
+    }
+  });
 }
 
 window.onresize = adjustGridItems();
@@ -320,8 +343,3 @@ function reloadStylesheets() {
 }
 
 /* ----------------------------------------------------------------------------- */
-
-function closeUnderConstruction() {
-  const underConstruction = document.getElementById('uc-styles');
-  underConstruction.parentNode.removeChild(underConstruction);
-}
