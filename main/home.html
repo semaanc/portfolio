@@ -22,10 +22,15 @@
 
 <body>
     <nav>
-        <ul>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="site-nav">
             <li><a href="#experience">Experience</a></li>
             <li class="dropdown">
-                <a>Projects</a>
+                <a href="#projects" aria-expanded="false">Projects</a>
                 <ul class="dropdown-content">
                     <li><a href="#projects-ce">Computer Engineering Projects</a></li>
                     <li><a href="#projects-cs">Computer Science Projects</a></li>
@@ -58,7 +63,8 @@
         <section id="experience">
             <h2>Experience</h2>
             <!-- SharkNinja - SDET I -->
-            <div class="timeline"><div class="timeline-item">
+            <div class="timeline">
+                <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <img src="/images/logos/sharkninja.png" alt="SharkNinja">
@@ -103,6 +109,8 @@
                             <li>Led end-to-end execution of the cross-functional robovacuum beta testing programs across CenterCode and Jira, driving user engagement, issue triage, RCA coordination, and release-risk visibility.</li>
                             <li>Built AWS Quicksight dashboards using DOMO and CCT logs to visualize robot errors/warnings, map them to user DSNs, and analyze top recurring issues for data-driven prioritization.</li>
                             <li>Owned scalable issue-tracking infrastructure through custom Jira workflows and automations, reducing manual tracking by 80% and improved visibility across globally distributed teams.</li>
+                            <li>Collaborated with cross-functional teams on robotic vacuum development to define project scopes, align schedules and streamline communication.</li>
+                            <li>Facilitated issue resolution and risk mitigation, leveraging AWS Cloudberry S3 and Call Center Tools to pull logs for RCA.</li>
                         </ul>
                     </div>
                 </div>
@@ -182,7 +190,9 @@
                 </div>
             </div>
 
-        </section><section id="projects">
+        </section>
+
+        <section id="projects">
             <h2>Projects</h2>
             <section id="projects-ce">
                 <h3>Computer Engineering Projects</h3>
@@ -2341,15 +2351,9 @@
                 <div class="skill-category">
                     <h3 class="skill-title">Languages & Proficiencies</h3>
                     <div class="skill-icons">
-                        <div><img src="/images/skills/french.png" alt="French"> French <span
-                                class="proficiency-level">Mother
-                                Tongue</span></div>
-                        <div><img src="/images/skills/english.png" alt="English"> English <span
-                                class="proficiency-level">Mother
-                                Tongue</span></div>
-                        <div><img src="/images/skills/arabic.png" alt="Arabic"> Arabic <span
-                                class="proficiency-level">Mother
-                                Tongue</span></div>
+                        <div><img src="/images/skills/french.png" alt="French"> French <span class="proficiency-level">Mother Tongue</span></div>
+                        <div><img src="/images/skills/english.png" alt="English"> English <span class="proficiency-level">Mother Tongue</span></div>
+                        <div><img src="/images/skills/arabic.png" alt="Arabic"> Arabic <span class="proficiency-level">Mother Tongue</span></div>
                     </div>
                 </div>
             </div>
@@ -2543,6 +2547,12 @@
                         <img src="/images/interests/badminton.png" alt="Badminton">
                     </div>
                     <p>Badminton</p>
+                </div>
+                <div class="interest">
+                    <div class="interest-icon">
+                        <img src="/images/interests/3d-printing.png" alt="3D Printing">
+                    </div>
+                    <p>3D Printing</p>
                 </div>
                 <div class="interest">
                     <div class="interest-icon">
