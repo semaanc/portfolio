@@ -61,7 +61,7 @@ function setupContactForm() {
         function(error) {
           console.log('FAILED...', error);
           responseMessage.innerHTML =
-              '<span class=\'error-message\'>Failed to send message. If the issue persists contact me <a href=\'mailto:semaanceline@hotmail.com\'>here</a>!</span>';
+              '<span class=\'error-message\'>Failed to send message. If the issue persists contact me <a href=\'mailto:celine-semaan@outlook.com\'>here</a>!</span>';
           showResponseMessage(responseMessage, false);
         });
   });
