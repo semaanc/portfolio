@@ -146,3 +146,7 @@ npm install axios querystring fs replace-in-file postcss postcss-nested cssnano
 # Author
 Celine Semaan
 
+
+## November 2026 resume-aligned additions
+
+The portfolio remains a comprehensive record: existing experience, projects, education, awards, clubs, and interests were retained. The SDET title was aligned with the current resume, seven detailed SDET accomplishments were added, and missing technical skills were added as text chips (no new external icon dependencies). Both `main/home.html` and deployable `index.html` were updated.

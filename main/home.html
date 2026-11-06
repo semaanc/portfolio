@@ -70,7 +70,7 @@
                             <img src="/images/logos/sharkninja.png" alt="SharkNinja">
                             <div class="line-container">
                                 <div class="first-line">
-                                    <h3>Software Development Engineer I in Test</h3>
+                                    <h3>Software Development Engineer in Test (SDET)</h3>
                                     <h5>Needham, MA, United States</h5>
                                 </div>
                                 <div class="second-line">
@@ -80,12 +80,12 @@
                             </div>
                         </div>
                         <ul class="details">
-                            <li>Driving development of cross-platform mobile automation frameworks using Python, Appium, and Pytest, integrated with Jenkins and Bitbucket Pipelines to validate end-to-end user flows across iOS and Android.</li>
-                            <li>Architected a PostgreSQL-backed test results system and implemented tooling to publish results to Confluence, Jira, and Xray; built Metabase dashboards to visualize failure trends, test reliability, and performance metrics, and leveraged LLM-based tooling to streamline data querying and analysis.</li>
-                            <li>Created an AI-assisted test generation tool using a Claude MCP server integrated with Appium to generate test cases and identify page objects, accelerating automation development and reducing manual scripting effort.</li>
-                            <li>Designed and prototyped custom 3D-printed fixtures in CAD for hardware-in-the-loop automation with Raspberry Pi, SSH, and servos, enabling hands-off robot pairing and onboarding validation.</li>
-                            <li>Built an automated multilingual voice validation pipeline using Whisper and translation APIs to transcribe and validate audio against defined requirements, detecting punctuation, localization, and content inconsistencies.</li>
-                            <li>Developed and executed load and reliability testing using MQTT and Protobuf to validate device-cloud communication and system performance under real-world conditions.</li>
+                            <li><strong class="sdet-section-title">Automation Architecture:</strong> Independently architected a Python/Pytest end-to-end and hardware-in-the-loop (HIL) automation framework spanning iOS/Android apps, cloud services, and connected devices, supporting 100+ system-level tests across physical and simulated hardware.</li>
+                            <li><strong class="sdet-section-title">Embedded Systems &amp; Hardware Integration:</strong> Developed configurable hardware orchestration, PW board simulation, TFT control, and fault injection using UART, SEGGER RTT, ST-Link, OpenOCD, and FTDI. Designed 3D-printed fixtures using Raspberry Pi and servos to automate device pairing and onboarding.</li>
+                            <li><strong class="sdet-section-title">CI/CD &amp; Developer Infrastructure:</strong> Engineered Bitbucket Pipelines and Jenkins workflows for automated regression testing, branch synchronization, database validation, dependency management, and integration with Jira, Xray, and Confluence.</li>
+                            <li><strong class="sdet-section-title">AI-Powered Developer Tooling:</strong> Integrated LLM-powered code review and pipeline failure analysis into CI/CD workflows. Built Claude MCP/Appium tooling for AI-assisted test generation and page-object discovery, alongside multilingual voice validation using Whisper and translation APIs.</li>
+                            <li><strong class="sdet-section-title">Test Analytics &amp; Reliability:</strong> Architected PostgreSQL-backed test reporting integrated with Jira/Xray, Confluence, and Metabase dashboards. Conducted MQTT/Protobuf device-cloud reliability testing and automated defect tracking.</li>
+                            <li><strong class="sdet-section-title">Technical Leadership:</strong> Independently drove cross-functional requirements gathering, test strategy, and technical planning, designing extensible abstractions supporting multiple device types, cloud environments, and communication protocols.</li>
                         </ul>
                     </div>
                 </div>
@@ -2216,144 +2216,181 @@
             <h2>Skills</h2>
 
             <div class="skills-container">
-                <!-- Software Engineering & Development -->
+                <div class="skill-category">
+                    <h3 class="skill-title">Test Automation &amp; QA</h3>
+                    <div class="skill-icons">
+                        <div><img src="/images/skills/pytest.png" alt="Pytest" title="Pytest"> Pytest</div>
+                        <div><img src="/images/skills/appium.png" alt="Appium" title="Appium"> Appium</div>
+                        <div><img src="/images/skills/hil.png" alt="Hardware-in-the-Loop" title="Hardware-in-the-Loop">Hardware-in-the-Loop</div>
+                        <div><img src="/images/skills/jira-xray.png" alt="Jira Xray" title="Jira Xray">Jira Xray</div>
+                        <div><img src="/images/skills/postman.png" alt="Postman" title="Postman"> Postman</div>
+                        <div><img src="/images/skills/cypress.png" alt="Cypress" title="Cypress"> Cypress</div>
+                        <div><img src="/images/skills/jest.png" alt="Jest" title="Jest"> Jest</div>
+                        <div><img src="/images/skills/junit.png" alt="JUnit" title="JUnit"> JUnit</div>
+                        <div><img src="/images/skills/xctest.png" alt="XCTest" title="XCTest"> XCTest</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-title">Embedded Systems &amp; Robotics</h3>
+                    <div class="skill-icons">
+                        <div><img src="/images/skills/embedded-scripting.png" alt="Embedded Scripting" title="Embedded Scripting"> Embedded Scripting</div>
+                        <div><img src="/images/skills/uart.png" alt="UART" title="UART" width="30" height="30"> UART</div>
+                        <div><img src="/images/skills/segger-rtt.png" alt="SEGGER RTT" title="SEGGER RTT" width="30" height="30"> SEGGER RTT</div>
+                        <div><img src="/images/skills/st-link.png" alt="ST-Link" title="ST-Link" width="30" height="30"> ST-Link</div>
+                        <div><img src="/images/skills/openocd.png" alt="OpenOCD" title="OpenOCD" width="30" height="30"> OpenOCD</div>
+                        <div><img src="/images/skills/ftdi.png" alt="FTDI" title="FTDI" width="30" height="30"> FTDI</div>
+                        <div><img src="/images/skills/gpio.png" alt="GPIO" title="GPIO" width="30" height="30"> GPIO</div>
+                        <div><img src="/images/skills/servo-control.png" alt="Servo Control" title="Servo Control" width="30" height="30"> Servo Control</div>
+                        <div><img src="/images/skills/opencv.png" alt="OpenCV" title="OpenCV"> OpenCV</div>
+                        <div><img src="/images/skills/mavlink.png" alt="MAVLink" title="MAVLink"> MAVLink</div>
+                        <div><img src="/images/skills/arduino.png" alt="Arduino" title="Arduino"> Arduino</div>
+                        <div><img src="/images/skills/fpga.png" alt="FPGA" title="FPGA"> FPGA</div>
+                        <div><img src="/images/skills/vivado.png" alt="Vivado" title="Vivado"> Vivado</div>
+                        <div><img src="/images/skills/risc-v.png" alt="RISC-V" title="RISC-V"> RISC-V</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-title">AI &amp; Developer Tooling</h3>
+                    <div class="skill-icons">
+                        <div><img src="/images/skills/claude.png" alt="Claude" title="Claude"> Claude</div>
+                        <div><img src="/images/skills/mcp.png" alt="Model Context Protocol (MCP)" title="Model Context Protocol (MCP)" width="30" height="30"> Model Context Protocol (MCP)</div>
+                        <div><img src="/images/skills/llm-integration.png" alt="LLM Integration" title="LLM Integration" width="30" height="30"> LLM Integration</div>
+                        <div><img src="/images/skills/openai-whisper.png" alt="OpenAI Whisper" title="OpenAI Whisper" width="30" height="30"> OpenAI Whisper</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-title">CI/CD, Cloud &amp; Development Tools</h3>
+                    <div class="skill-icons">
+                        <div><img src="/images/skills/bitbucket.png" alt="Bitbucket Pipelines" title="Bitbucket Pipelines"> Bitbucket Pipelines</div>
+                        <div><img src="/images/skills/bitbucket.png" alt="Bitbucket CI/CD" title="Bitbucket CI/CD" width="30" height="30"> Bitbucket CI/CD</div>
+                        <div><img src="/images/skills/jenkins.png" alt="Jenkins" title="Jenkins"> Jenkins</div>
+                        <div><img src="/images/skills/git.png" alt="Git" title="Git"> Git</div>
+                        <div><img src="/images/skills/aws.png" alt="AWS" title="AWS"> AWS</div>
+                        <div><img src="/images/skills/linux.png" alt="Linux" title="Linux"> Linux</div>
+                        <div><img src="/images/skills/docker.png" alt="Docker" title="Docker"> Docker</div>
+                        <div><img src="/images/skills/github.png" alt="GitHub" title="GitHub"> GitHub</div>
+                        <div><img src="/images/skills/automation-anywhere.jpg" alt="Automation Anywhere" title="Automation Anywhere"> Automation
+                            Anywhere</div>
+                        <div><img src="/images/skills/xcode.png" alt="Xcode" title="Xcode"> Xcode</div>
+                    </div>
+                </div>
+
                 <div class="skill-category">
                     <h3 class="skill-title">Programming Languages</h3>
                     <div class="skill-icons">
-                        <div><img src="/images/skills/java.png" alt="Java"> Java</div>
-                        <div><img src="/images/skills/python.png" alt="Python"> Python</div>
-                        <div><img src="/images/skills/html5.png" alt="HTML5"> HTML5</div>
-                        <div><img src="/images/skills/javascript.png" alt="JavaScript"> JavaScript</div>
-                        <div><img src="/images/skills/typescript.png" alt="TypeScript"> TypeScript</div>
-                        <div><img src="/images/skills/groovy.png" alt="Groovy"> Groovy</div>
-                        <div><img src="/images/skills/json.png" alt="JSON"> JSON</div>
-                        <div><img src="/images/skills/systemverilog.png" alt="SystemVerilog"> SystemVerilog</div>
-                        <div><img src="/images/skills/assemblyx86-64.png" alt="Assembly x86-64"> Assembly x86-64</div>
-                        <div><img src="/images/skills/cpp.png" alt="C++"> C++</div>
-                        <div><img src="/images/skills/swift.png" alt="Swift"> Swift</div>
-                        <div><img src="/images/skills/sql.png" alt="SQL"> SQL</div>
-                        <div><img src="/images/skills/lean.png" alt="LEAN"> LEAN</div>
-                        <div><img src="/images/skills/matlab.png" alt="MATLAB"> MATLAB</div>
-                        <div><img src="/images/skills/arduino.png" alt="Arduino"> Arduino</div>
+                        <div><img src="/images/skills/python.png" alt="Python" title="Python"> Python</div>
+                        <div><img src="/images/skills/sql.png" alt="SQL" title="SQL"> SQL</div>
+                        <div><img src="/images/skills/groovy.png" alt="Groovy" title="Groovy"> Groovy</div>
+                        <div><img src="/images/skills/cpp.png" alt="C++" title="C++"> C++</div>
+                        <div><img src="/images/skills/typescript.png" alt="TypeScript" title="TypeScript"> TypeScript</div>
+                        <div><img src="/images/skills/javascript.png" alt="JavaScript" title="JavaScript"> JavaScript</div>
+                        <div><img src="/images/skills/java.png" alt="Java" title="Java"> Java</div>
+                        <div><img src="/images/skills/systemverilog.png" alt="SystemVerilog" title="SystemVerilog"> SystemVerilog</div>
+                        <div><img src="/images/skills/assemblyx86-64.png" alt="Assembly x86-64" title="Assembly x86-64"> Assembly x86-64</div>
+                        <div><img src="/images/skills/matlab.png" alt="MATLAB" title="MATLAB"> MATLAB</div>
+                        <div><img src="/images/skills/lean.png" alt="LEAN" title="LEAN"> LEAN</div>
+                        <div><img src="/images/skills/swift.png" alt="Swift" title="Swift"> Swift</div>
                     </div>
                 </div>
 
-                <!-- Frameworks & Libraries -->
                 <div class="skill-category">
-                    <h3 class="skill-title">Frameworks & Libraries</h3>
+                    <h3 class="skill-title">Databases &amp; Communication</h3>
                     <div class="skill-icons">
-                        <div><img src="/images/skills/react.png" alt="React.js"> React.js</div>
-                        <div><img src="/images/skills/nodejs.png" alt="Node.js"> Node.js</div>
-                        <div><img src="/images/skills/pytest.png" alt="Pytest"> Pytest</div>
-                        <div><img src="/images/skills/protobuf.png" alt="Protobuf"> Protobuf</div>
-                        <div><img src="/images/skills/mqtt.png" alt="MQTT"> MQTT</div>
-                        <div><img src="/images/skills/redux.png" alt="Redux"> Redux</div>
-                        <div><img src="/images/skills/materialui.png" alt="Material UI"> Material UI</div>
-                        <div><img src="/images/skills/mongoose.png" alt="Mongoose"> Mongoose</div>
-                        <div><img src="/images/skills/cypress.png" alt="Cypress"> Cypress</div>
-                        <div><img src="/images/skills/jest.png" alt="Jest"> Jest</div>
-                        <div><img src="/images/skills/junit.png" alt="JUnit"> JUnit</div>
-                        <div><img src="/images/skills/xctest.png" alt="XCTest"> XCTest</div>
-                        <div><img src="/images/skills/opencv.png" alt="OpenCV"> OpenCV</div>
-                        <div><img src="/images/skills/mavlink.png" alt="MAVLink"> MAVLink</div>
-                        <div><img src="/images/skills/uikit.png" alt="UIKit"> UIKit</div>
+                        <div><img src="/images/skills/postgresql.png" alt="PostgreSQL" title="PostgreSQL"> PostgreSQL</div>
+                        <div><img src="/images/skills/mqtt.png" alt="MQTT" title="MQTT"> MQTT</div>
+                        <div><img src="/images/skills/protobuf.png" alt="Protobuf" title="Protobuf"> Protobuf</div>
+                        <div><img src="/images/skills/json.png" alt="JSON" title="JSON"> JSON</div>
+                        <div><img src="/images/skills/mongodb.png" alt="MongoDB" title="MongoDB"> MongoDB</div>
+                        <div><img src="/images/skills/mongoose.png" alt="Mongoose" title="Mongoose"> Mongoose</div>
                     </div>
                 </div>
 
-                <!-- Development Tools & Testing -->
                 <div class="skill-category">
-                    <h3 class="skill-title">Software Development & Testing Tools</h3>
+                    <h3 class="skill-title">Collaboration &amp; Documentation</h3>
                     <div class="skill-icons">
-                        <div><img src="/images/skills/git.png" alt="Git"> Git</div>
-                        <div><img src="/images/skills/github.png" alt="GitHub"> GitHub</div>
-                        <div><img src="/images/skills/bitbucket.png" alt="Bitbucket"> Bitbucket Pipelines</div>
-                        <div><img src="/images/skills/jenkins.png" alt="Jenkins"> Jenkins</div>
-                        <div><img src="/images/skills/jira.png" alt="Jira"> Jira</div>
-                        <div><img src="/images/skills/embedded-scripting.png" alt="Embedded Scripting"> Embedded Scripting</div>
-                        <div><img src="/images/skills/postgresql.png" alt="PostgreSQL"> PostgreSQL</div>
-                        <div><img src="/images/skills/claude.png" alt="Claude"> Claude</div>
-                        <div><img src="/images/skills/postman.png" alt="Postman"> Postman</div>
-                        <div><img src="/images/skills/aws.png" alt="AWS"> AWS</div>
-                        <div><img src="/images/skills/appium.png" alt="Appium"> Appium</div>
-                        <div><img src="/images/skills/mongodb.png" alt="MongoDB"> MongoDB</div>
-                        <div><img src="/images/skills/linux.png" alt="Linux"> Linux</div>
-                        <div><img src="/images/skills/risc-v.png" alt="RISC-V"> RISC-V</div>
-                        <div><img src="/images/skills/fpga.png" alt="FPGA"> FPGA</div>
-                        <div><img src="/images/skills/vivado.png" alt="Vivado"> Vivado</div>
-                        <div><img src="/images/skills/chrome-extension.png" alt="Chrome for Developers"> Chrome for Developers</div>
-                        <div><img src="/images/skills/appsmith.png" alt="AppSmith"> AppSmith</div>
-                        <div><img src="/images/skills/docker.png" alt="Docker"> Docker</div>
-                        <div><img src="/images/skills/xcode.png" alt="Xcode"> Xcode</div>
-                        <div><img src="/images/skills/automation-anywhere.jpg" alt="Automation Anywhere"> Automation
-                            Anywhere</div>
-                    </div>
-                </div>
-
-                <!-- Creative Design & Multimedia Tools -->
-                <div class="skill-category">
-                    <h3 class="skill-title">Creative Design & Engineering Tools</h3>
-                    <div class="skill-icons">
-                        <div><img src="/images/skills/solidworks.png" alt="SOLIDWORKS"> SOLIDWORKS</div>
-                        <div><img src="/images/skills/autocad.png" alt="AutoCAD"> AutoCAD</div>
-                        <div><img src="/images/skills/fusion.png" alt="Autodesk Fusion 360"> Autodesk Fusion 360</div>
-                        <div><img src="/images/skills/meta-quest.png" alt="Meta Quest"> Meta Quest</div>
-                        <div><img src="/images/skills/shapesxr.png" alt="ShapesXR"> ShapesXR</div>
-                        <div><img src="/images/skills/figma.png" alt="Figma"> Figma</div>
-                        <div><img src="/images/skills/balsamiq.png" alt="Balsamiq"> Balsamiq</div>
-                        <div><img src="/images/skills/photoshop.png" alt="Adobe Photoshop"> Adobe Photoshop</div>
-                        <div><img src="/images/skills/illustrator.png" alt="Adobe Illustrator"> Adobe Illustrator</div>
-                        <div><img src="/images/skills/premiere-pro.png" alt="Adobe Premiere Pro"> Adobe Premiere Pro
-                        </div>
-                        <div><img src="/images/skills/final-cut-pro.png" alt="Final Cut Pro"> Final Cut Pro</div>
-                        <div><img src="/images/skills/capcut.png" alt="CapCut"> CapCut</div>
-                    </div>
-                </div>
-
-                <!-- Documentation Tools & Method -->
-                <div class="skill-category">
-                    <h3 class="skill-title">Organization Tools & Documentation Methods</h3>
-                    <div class="skill-icons">
-                        <div><img src="/images/skills/confluence.png" alt="Confluence"> Confluence</div>
-                        <div><img src="/images/skills/metabase.png" alt="Metabase"> Metabase</div>
-                        <div><img src="/images/skills/miro.png" alt="Miro"> Miro</div>
-                        <div><img src="/images/skills/canva.png" alt="Canva"> Canva</div>
-                        <div><img src="/images/skills/design-specifications.png" alt="Design Specifications"> Design
-                            Specifications</div>
-                        <div><img src="/images/skills/user-story-development.png" alt="User Story Development"> User
+                        <div><img src="/images/skills/jira.png" alt="Jira" title="Jira"> Jira</div>
+                        <div><img src="/images/skills/confluence.png" alt="Confluence" title="Confluence"> Confluence</div>
+                        <div><img src="/images/skills/user-story-development.png" alt="User Story Development" title="User Story Development"> User
                             Story Development</div>
-                        <div><img src="/images/skills/website-mapping.png" alt="Website Mapping"> Website Mapping</div>
-                        <div><img src="/images/skills/notion.png" alt="Notion"> Notion</div>
-                        <div><img src="/images/skills/linear.png" alt="Linear"> Linear</div>
-                        <div><img src="/images/skills/lucidchart.png" alt="Lucidchart"> Lucidchart</div>
-                        <div><img src="/images/skills/visio.png" alt="Microsoft Visio"> Microsoft Visio</div>
-                        <div><img src="/images/skills/whiteboard.png" alt="Whiteboard"> Microsoft Whiteboard</div>
-                        <div><img src="/images/skills/flowcharts.png" alt="Flowcharts"> Flowcharts</div>
-                    </div>
-                </div>
-
-                <!-- Data Analysis & Visualization -->
-                <div class="skill-category">
-                    <h3 class="skill-title">Data Analysis & Visualization</h3>
-                    <div class="skill-icons">
-                        <div><img src="/images/skills/powerbi.png" alt="Microsoft PowerBI"> Microsoft PowerBI</div>
-                        <div><img src="/images/skills/excel.png" alt="Microsoft Excel"> Microsoft Excel</div>
-                        <div><img src="/images/skills/powerpoint.png" alt="Microsoft PowerPoint"> Microsoft PowerPoint
+                        <div><img src="/images/skills/notion.png" alt="Notion" title="Notion"> Notion</div>
+                        <div><img src="/images/skills/linear.png" alt="Linear" title="Linear"> Linear</div>
+                        <div><img src="/images/skills/powerpoint.png" alt="Microsoft PowerPoint" title="Microsoft PowerPoint"> Microsoft PowerPoint
                         </div>
-                        <div><img src="/images/skills/word.png" alt="Microsoft Word"> Microsoft Word</div>
-                        <div><img src="/images/skills/mathematics.png" alt="Mathematics"> Mathematics</div>
-                        <div><img src="/images/skills/physics.png" alt="Physics"> Physics</div>
-                        <div><img src="/images/skills/chemistry.png" alt="Chemistry"> Chemistry</div>
-                        <div><img src="/images/skills/biology.png" alt="Biology"> Biology</div>
+                        <div><img src="/images/skills/word.png" alt="Microsoft Word" title="Microsoft Word"> Microsoft Word</div>
+                        <div><img src="/images/skills/miro.png" alt="Miro" title="Miro"> Miro</div>
+                        <div><img src="/images/skills/lucidchart.png" alt="Lucidchart" title="Lucidchart"> Lucidchart</div>
+                        <div><img src="/images/skills/flowcharts.png" alt="Flowcharts" title="Flowcharts"> Flowcharts</div>
+                        <div><img src="/images/skills/visio.png" alt="Microsoft Visio" title="Microsoft Visio"> Microsoft Visio</div>
+                        <div><img src="/images/skills/whiteboard.png" alt="Microsoft Whiteboard" title="Microsoft Whiteboard"> Microsoft Whiteboard</div>
                     </div>
                 </div>
 
-                <!-- Languages & Proficiencies -->
                 <div class="skill-category">
-                    <h3 class="skill-title">Languages & Proficiencies</h3>
+                    <h3 class="skill-title">Data Analysis &amp; Science</h3>
                     <div class="skill-icons">
-                        <div><img src="/images/skills/french.png" alt="French"> French <span class="proficiency-level">Mother Tongue</span></div>
-                        <div><img src="/images/skills/english.png" alt="English"> English <span class="proficiency-level">Mother Tongue</span></div>
-                        <div><img src="/images/skills/arabic.png" alt="Arabic"> Arabic <span class="proficiency-level">Mother Tongue</span></div>
+                        <div><img src="/images/skills/metabase.png" alt="Metabase" title="Metabase"> Metabase</div>
+                        <div><img src="/images/skills/excel.png" alt="Microsoft Excel" title="Microsoft Excel"> Microsoft Excel</div>
+                        <div><img src="/images/skills/powerbi.png" alt="Microsoft PowerBI" title="Microsoft PowerBI"> Microsoft PowerBI</div>
+                        <div><img src="/images/skills/mathematics.png" alt="Mathematics" title="Mathematics"> Mathematics</div>
+                        <div><img src="/images/skills/physics.png" alt="Physics" title="Physics"> Physics</div>
+                        <div><img src="/images/skills/chemistry.png" alt="Chemistry" title="Chemistry"> Chemistry</div>
+                        <div><img src="/images/skills/biology.png" alt="Biology" title="Biology"> Biology</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-title">Web &amp; App Development</h3>
+                    <div class="skill-icons">
+                        <div><img src="/images/skills/rest-apis.png" alt="REST APIs" title="REST APIs">REST APIs</div>
+                        <div><img src="/images/skills/react.png" alt="React.js" title="React.js"> React.js</div>
+                        <div><img src="/images/skills/nodejs.png" alt="Node.js" title="Node.js"> Node.js</div>
+                        <div><img src="/images/skills/html5.png" alt="HTML5" title="HTML5"> HTML5</div>
+                        <div><img src="/images/skills/redux.png" alt="Redux" title="Redux"> Redux</div>
+                        <div><img src="/images/skills/materialui.png" alt="Material UI" title="Material UI"> Material UI</div>
+                        <div><img src="/images/skills/chrome-extension.png" alt="Chrome for Developers" title="Chrome for Developers"> Chrome for Developers</div>
+                        <div><img src="/images/skills/appsmith.png" alt="AppSmith" title="AppSmith"> AppSmith</div>
+                        <div><img src="/images/skills/uikit.png" alt="UIKit" title="UIKit"> UIKit</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-title">Design &amp; Prototyping</h3>
+                    <div class="skill-icons">
+                        <div><img src="/images/skills/solidworks.png" alt="SOLIDWORKS" title="SOLIDWORKS"> SOLIDWORKS</div>
+                        <div><img src="/images/skills/fusion.png" alt="Autodesk Fusion 360" title="Autodesk Fusion 360"> Autodesk Fusion 360</div>
+                        <div><img src="/images/skills/design-specifications.png" alt="Design Specifications" title="Design Specifications"> Design
+                            Specifications</div>
+                        <div><img src="/images/skills/website-mapping.png" alt="Website Mapping" title="Website Mapping"> Website Mapping</div>
+                        <div><img src="/images/skills/figma.png" alt="Figma" title="Figma"> Figma</div>
+                        <div><img src="/images/skills/balsamiq.png" alt="Balsamiq" title="Balsamiq"> Balsamiq</div>
+                        <div><img src="/images/skills/meta-quest.png" alt="Meta Quest" title="Meta Quest"> Meta Quest</div>
+                        <div><img src="/images/skills/shapesxr.png" alt="ShapesXR" title="ShapesXR"> ShapesXR</div>
+                        <div><img src="/images/skills/autocad.png" alt="AutoCAD" title="AutoCAD"> AutoCAD</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-title">Visual Design &amp; Multimedia</h3>
+                    <div class="skill-icons">
+                        <div><img src="/images/skills/canva.png" alt="Canva" title="Canva"> Canva</div>
+                        <div><img src="/images/skills/premiere-pro.png" alt="Adobe Premiere Pro" title="Adobe Premiere Pro"> Adobe Premiere Pro
+                        </div>
+                        <div><img src="/images/skills/capcut.png" alt="CapCut" title="CapCut"> CapCut</div>
+                        <div><img src="/images/skills/photoshop.png" alt="Adobe Photoshop" title="Adobe Photoshop"> Adobe Photoshop</div>
+                        <div><img src="/images/skills/illustrator.png" alt="Adobe Illustrator" title="Adobe Illustrator"> Adobe Illustrator</div>
+                        <div><img src="/images/skills/final-cut-pro.png" alt="Final Cut Pro" title="Final Cut Pro"> Final Cut Pro</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-title">Languages &amp; Proficiencies</h3>
+                    <div class="skill-icons">
+                        <div><img src="/images/skills/french.png" alt="French" title="French"> French <span class="proficiency-level">Mother Tongue</span></div>
+                        <div><img src="/images/skills/english.png" alt="English" title="English"> English <span class="proficiency-level">Mother Tongue</span></div>
+                        <div><img src="/images/skills/arabic.png" alt="Arabic" title="Arabic"> Arabic <span class="proficiency-level">Mother Tongue</span></div>
                     </div>
                 </div>
             </div>
