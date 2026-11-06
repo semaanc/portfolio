@@ -2,12 +2,10 @@ name: Build and deploy GitHub Pages
 
 on:
   push:
-    branches:
-      - main
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -36,20 +34,6 @@ jobs:
 
       - name: Run minify script
         run: npm run minify
-
-      - name: Commit and push changes if there are any
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add .
-          if git diff-index --quiet HEAD; then
-            echo "No changes to commit";
-          else
-            git commit -m 'Auto-minify files'
-            git push origin main
-          fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
